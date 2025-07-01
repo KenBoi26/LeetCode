@@ -1,28 +1,12 @@
 class Solution {
 public:
-    int possibleStringCount(std::string word) {
-        int n = word.length();
-        if (n == 0) {
-            return 0; 
-        }
-        int count = 1; 
-        for (int i = 0; i < n; ) {
-            char currentChar = word[i];
-            int j = i; 
-
-            
-            while (j < n && word[j] == currentChar) {
-                j++;
+    int possibleStringCount(string word) {
+        int n=word.length();
+        int count = n;
+        for(int i=1; i<n; i++){
+            if(word[i] != word[i - 1]){
+                count--;
             }
-            
-            
-            int blockLength = j - i; 
-
-            if (blockLength > 1) {
-                count += (blockLength - 1);
-            }
-            
-            i = j; 
         }
 
         return count;
