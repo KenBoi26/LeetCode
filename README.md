@@ -5,11 +5,11 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 ## 📊 Progress Overview
 
 <!-- LEETCODE_STATS_START -->
-![Easy](https://img.shields.io/badge/Easy-0-green?style=flat-square&logo=leetcode&logoColor=white)
-![Medium](https://img.shields.io/badge/Medium-0-orange?style=flat-square&logo=leetcode&logoColor=white)
-![Hard](https://img.shields.io/badge/Hard-0-red?style=flat-square&logo=leetcode&logoColor=white)
+![Easy](https://img.shields.io/badge/Easy-0-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-0-orange?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-0-red?style=for-the-badge)
 
-**Total Problems Solved: 0**
+**Total Solved: 0**
 <!-- LEETCODE_STATS_END -->
 
 ### 🎯 Difficulty Breakdown
