@@ -5,11 +5,51 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 ## 📊 Progress Overview
 
 <!-- LEETCODE_STATS_START -->
-![Easy](https://img.shields.io/badge/Easy-10-green?style=for-the-badge)
-![Medium](https://img.shields.io/badge/Medium-10-orange?style=for-the-badge)
-![Hard](https://img.shields.io/badge/Hard-1-red?style=for-the-badge)
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+    <div style="display: inline-block; text-align: center; margin: 10px;">
+    <svg width="100" height="100" viewBox="0 0 36 36" style="display: block; margin: 0 auto;">
+        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#e9ecef" stroke-width="3.8" />
+        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#28a745" stroke-width="2.8"
+              stroke-dasharray="47.61904761904761, 100"
+              stroke-linecap="round"
+              transform="rotate(-90 18 18)" />
+        <text x="18" y="20.35" text-anchor="middle" font-size="0.6em" fill="#333" font-family="sans-serif">10</text>
+    </svg>
+    <p style="margin-top: 5px; font-size: 0.9em; color: #555; font-family: sans-serif;">Easy</p>
+</div>
+    <div style="display: inline-block; text-align: center; margin: 10px;">
+    <svg width="100" height="100" viewBox="0 0 36 36" style="display: block; margin: 0 auto;">
+        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#e9ecef" stroke-width="3.8" />
+        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#ffc107" stroke-width="2.8"
+              stroke-dasharray="47.61904761904761, 100"
+              stroke-linecap="round"
+              transform="rotate(-90 18 18)" />
+        <text x="18" y="20.35" text-anchor="middle" font-size="0.6em" fill="#333" font-family="sans-serif">10</text>
+    </svg>
+    <p style="margin-top: 5px; font-size: 0.9em; color: #555; font-family: sans-serif;">Medium</p>
+</div>
+    <div style="display: inline-block; text-align: center; margin: 10px;">
+    <svg width="100" height="100" viewBox="0 0 36 36" style="display: block; margin: 0 auto;">
+        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#e9ecef" stroke-width="3.8" />
+        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              fill="none" stroke="#dc3545" stroke-width="2.8"
+              stroke-dasharray="4.761904761904762, 100"
+              stroke-linecap="round"
+              transform="rotate(-90 18 18)" />
+        <text x="18" y="20.35" text-anchor="middle" font-size="0.6em" fill="#333" font-family="sans-serif">1</text>
+    </svg>
+    <p style="margin-top: 5px; font-size: 0.9em; color: #555; font-family: sans-serif;">Hard</p>
+</div>
+</div>
 
 **Total Solved: 21**
+
 <!-- LEETCODE_STATS_END -->
 
 ### 🎯 Difficulty Breakdown
