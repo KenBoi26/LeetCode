@@ -45,7 +45,7 @@ public:
         }
 
         ListNode* mergedList = dummyHead->next;
-        delete dummyHead;
+        // delete dummyHead;
         return mergedList;
 
 
