@@ -26,8 +26,8 @@ class LeetCodeReadmeUpdater:
         """
         self.repo_path = Path(repo_path).resolve()
         self.readme_path = self.repo_path / "README.md"
-        # Common solution file names used by tools like leetsync
-        self.solution_files = ["solution.py", "solution.js", "solution.java", "solution.cpp", "solution.go", "solution.ts"]
+        # Define common code file extensions to look for
+        self.code_extensions = [".py", ".js", ".java", ".cpp", ".go", ".ts", ".cs"] # Added .cs for C#
         print(f"Initializing updater for repository at: {self.repo_path}")
 
     def scan_solutions(self):
@@ -57,13 +57,14 @@ class LeetCodeReadmeUpdater:
             title = problem_slug.replace('-', ' ').title()
             
             solution_path = None
-            for filename in self.solution_files:
-                if (item / filename).exists():
-                    solution_path = item / filename
-                    break
+            # Iterate through all files in the problem directory
+            for file_in_dir in item.iterdir():
+                if file_in_dir.is_file() and file_in_dir.suffix in self.code_extensions:
+                    solution_path = file_in_dir
+                    break # Found a solution file, no need to check other files
             
             if not solution_path:
-                print(f"Warning: No solution file found in {item.name}")
+                print(f"Warning: No solution file with a recognized code extension found in {item.name}")
                 continue
 
             difficulty = self._get_difficulty(item)
@@ -124,14 +125,16 @@ class LeetCodeReadmeUpdater:
         readme_content = re.sub(
             r'<!-- LEETCODE_STATS_START -->(.|\n)*?<!-- LEETCODE_STATS_END -->',
             f'<!-- LEETCODE_STATS_START -->\n{stats_content}\n<!-- LEETCODE_STATS_END -->',
-            readme_content
+            readme_content,
+            flags=re.DOTALL # Ensure . matches newlines
         )
 
         # Replace table section
         readme_content = re.sub(
             r'<!-- LEETCODE_TABLE_START -->(.|\n)*?<!-- LEETCODE_TABLE_END -->',
             f'<!-- LEETCODE_TABLE_START -->\n{table_content}\n<!-- LEETCODE_TABLE_END -->',
-            readme_content
+            readme_content,
+            flags=re.DOTALL # Ensure . matches newlines
         )
         
         self.readme_path.write_text(readme_content, encoding="utf-8")
@@ -155,13 +158,17 @@ class LeetCodeReadmeUpdater:
         easy = counts["Easy"]
         medium = counts["Medium"]
         hard = counts["Hard"]
+        unknown = counts["Unknown"] # Include unknown difficulty in stats
 
         stats_md = (
             f"![Easy](https://img.shields.io/badge/Easy-{easy}-green?style=for-the-badge)\n"
             f"![Medium](https://img.shields.io/badge/Medium-{medium}-orange?style=for-the-badge)\n"
-            f"![Hard](https://img.shields.io/badge/Hard-{hard}-red?style=for-the-badge)\n\n"
-            f"**Total Solved: {total}**"
+            f"![Hard](https://img.shields.io/badge/Hard-{hard}-red?style=for-the-badge)\n"
         )
+        if unknown > 0: # Only add unknown if there are any
+            stats_md += f"![Unknown](https://img.shields.io/badge/Unknown-{unknown}-lightgrey?style=for-the-badge)\n"
+        
+        stats_md += f"\n**Total Solved: {total}**"
         return stats_md
 
     def _generate_table(self, solutions):
@@ -182,7 +189,10 @@ class LeetCodeReadmeUpdater:
         for s in solutions:
             leetcode_url = f"https://leetcode.com/problems/{s['slug']}"
             title_link = f"[{s['title']}]({leetcode_url})"
+            
+            # Ensure the solution link is relative to the repo root
             solution_link = f"[{Path(s['path']).name}]({s['path']})"
+            
             difficulty_badge = f"`{s['difficulty']}`"
             
             row = f"| {s['number']} | {title_link} | {solution_link} | {difficulty_badge} |"
@@ -192,6 +202,8 @@ class LeetCodeReadmeUpdater:
 
 
 if __name__ == "__main__":
+    # You can specify the path to your LeetCode repository here if it's not the current directory
+    # For example: updater = LeetCodeReadmeUpdater(repo_path="D:/1. STUDIES/3. CODING/LeetCode/LeetCode")
     updater = LeetCodeReadmeUpdater()
     solved_problems = updater.scan_solutions()
     updater.update_readme(solved_problems)
