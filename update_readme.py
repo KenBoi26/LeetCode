@@ -121,7 +121,7 @@ class LeetCodeReadmeUpdater:
 
         readme_content = self.readme_path.read_text(encoding="utf-8")
 
-        # Replace stats section
+        # Replace stats section (using LEETCODE_STATS_START/END, which matches your README)
         readme_content = re.sub(
             r'<!-- LEETCODE_STATS_START -->(.|\n)*?<!-- LEETCODE_STATS_END -->',
             f'<!-- LEETCODE_STATS_START -->\n{stats_content}\n<!-- LEETCODE_STATS_END -->',
@@ -129,10 +129,10 @@ class LeetCodeReadmeUpdater:
             flags=re.DOTALL # Ensure . matches newlines
         )
 
-        # Replace table section
+        # Replace table section (UPDATED to use SOLUTIONS_TABLE_START/END)
         readme_content = re.sub(
-            r'<!-- LEETCODE_TABLE_START -->(.|\n)*?<!-- LEETCODE_TABLE_END -->',
-            f'<!-- LEETCODE_TABLE_START -->\n{table_content}\n<!-- LEETCODE_TABLE_END -->',
+            r'<!-- SOLUTIONS_TABLE_START -->(.|\n)*?<!-- SOLUTIONS_TABLE_END -->',
+            f'<!-- SOLUTIONS_TABLE_START -->\n{table_content}\n<!-- SOLUTIONS_TABLE_END -->',
             readme_content,
             flags=re.DOTALL # Ensure . matches newlines
         )
@@ -173,7 +173,8 @@ class LeetCodeReadmeUpdater:
 
     def _generate_table(self, solutions):
         """
-        Generates the markdown table of solved problems.
+        Generates the markdown table of solved problems,
+        matching the user's desired column order and adding LeetCode links.
         
         Args:
             solutions (list): The list of solved problems.
@@ -182,20 +183,26 @@ class LeetCodeReadmeUpdater:
             str: Markdown content for the problems table.
         """
         if not solutions:
-            return "| # | Title | Solution | Difficulty |\n|---|-------|----------|------------|\n| | *No problems synced yet. Start solving on LeetCode!* | | |"
+            # Updated default table to match user's header structure
+            return "| # | Title | Difficulty | Solution | LeetCode Link |\n|---|-------|------------|----------|---------------|\n| - | No solutions yet | - | - | - |"
 
-        table_header = "| # | Title | Solution | Difficulty |\n|---|-------|----------|------------|"
+        # Updated table header to match user's README.md
+        table_header = "| # | Title | Difficulty | Solution | LeetCode Link |\n|---|-------|------------|----------|---------------|"
         table_rows = []
         for s in solutions:
-            leetcode_url = f"https://leetcode.com/problems/{s['slug']}"
+            leetcode_url = f"https://leetcode.com/problems/{s['slug']}/" # Ensure trailing slash for consistency
+            
+            # Title linked to LeetCode problem
             title_link = f"[{s['title']}]({leetcode_url})"
             
-            # Ensure the solution link is relative to the repo root
+            # Link to the local solution file
             solution_link = f"[{Path(s['path']).name}]({s['path']})"
             
             difficulty_badge = f"`{s['difficulty']}`"
             
-            row = f"| {s['number']} | {title_link} | {solution_link} | {difficulty_badge} |"
+            # Construct the row in the order: # | Title | Difficulty | Solution | LeetCode Link
+            # The LeetCode Link column will explicitly show "[Link]"
+            row = f"| {s['number']} | {title_link} | {difficulty_badge} | {solution_link} | [Link]({leetcode_url}) |"
             table_rows.append(row)
             
         return f"{table_header}\n" + "\n".join(table_rows)
