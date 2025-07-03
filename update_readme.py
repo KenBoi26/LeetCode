@@ -117,6 +117,7 @@ class LeetCodeReadmeUpdater:
 
         print("Generating new README content...")
         stats_content = self._generate_stats(solutions)
+        difficulty_breakdown_content = self._generate_difficulty_breakdown(solutions) # NEW: Generate difficulty breakdown
         table_content = self._generate_table(solutions)
 
         readme_content = self.readme_path.read_text(encoding="utf-8")
@@ -125,6 +126,14 @@ class LeetCodeReadmeUpdater:
         readme_content = re.sub(
             r'<!-- LEETCODE_STATS_START -->(.|\n)*?<!-- LEETCODE_STATS_END -->',
             f'<!-- LEETCODE_STATS_START -->\n{stats_content}\n<!-- LEETCODE_STATS_END -->',
+            readme_content,
+            flags=re.DOTALL # Ensure . matches newlines
+        )
+
+        # Replace difficulty breakdown section (NEW)
+        readme_content = re.sub(
+            r'<!-- DIFFICULTY_BREAKDOWN_START -->(.|\n)*?<!-- DIFFICULTY_BREAKDOWN_END -->',
+            f'<!-- DIFFICULTY_BREAKDOWN_START -->\n{difficulty_breakdown_content}\n<!-- DIFFICULTY_BREAKDOWN_END -->',
             readme_content,
             flags=re.DOTALL # Ensure . matches newlines
         )
@@ -170,6 +179,44 @@ class LeetCodeReadmeUpdater:
         
         stats_md += f"\n**Total Solved: {total}**"
         return stats_md
+
+    def _generate_difficulty_breakdown(self, solutions):
+        """
+        Generates the markdown for the difficulty breakdown section.
+        
+        Args:
+            solutions (list): The list of solved problems.
+            
+        Returns:
+            str: Markdown content for the difficulty breakdown.
+        """
+        counts = defaultdict(int)
+        for s in solutions:
+            counts[s["difficulty"]] += 1
+        
+        # Assuming total problems for each difficulty are not tracked by this script,
+        # so it will show solved/solved. If you have total problem counts, you'd
+        # need to pass them or fetch them.
+        easy_solved = counts["Easy"]
+        medium_solved = counts["Medium"]
+        hard_solved = counts["Hard"]
+        
+        # For now, we'll assume total is same as solved for breakdown,
+        # or you can hardcode total if you know them.
+        # If you want to track total problems for each difficulty,
+        # you'd need to extend the script to read that data.
+        
+        breakdown_md = (
+            f"- **Easy**: {easy_solved}/{easy_solved} problems solved\n"
+            f"- **Medium**: {medium_solved}/{medium_solved} problems solved\n"
+            f"- **Hard**: {hard_solved}/{hard_solved} problems solved"
+        )
+        # Add unknown if present
+        if counts["Unknown"] > 0:
+            unknown_solved = counts["Unknown"]
+            breakdown_md += f"\n- **Unknown**: {unknown_solved}/{unknown_solved} problems solved"
+
+        return breakdown_md
 
     def _generate_table(self, solutions):
         """

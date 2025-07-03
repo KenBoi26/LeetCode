@@ -14,9 +14,9 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 
 ### 🎯 Difficulty Breakdown
 <!-- DIFFICULTY_BREAKDOWN_START -->
-- **Easy**: 0/0 problems solved
-- **Medium**: 0/0 problems solved  
-- **Hard**: 0/0 problems solved
+- **Easy**: 10/10 problems solved
+- **Medium**: 10/10 problems solved
+- **Hard**: 1/1 problems solved
 <!-- DIFFICULTY_BREAKDOWN_END -->
 
 ## 📚 Recent Submissions
