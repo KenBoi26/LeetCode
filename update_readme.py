@@ -10,8 +10,8 @@ with the latest progress stats and a table of solved problems.
 import os
 import re
 from pathlib import Path
-from datetime import datetime
-from collections import defaultdict
+from datetime import datetime, date
+from collections import defaultdict, OrderedDict
 
 class LeetCodeReadmeUpdater:
     """
@@ -68,6 +68,7 @@ class LeetCodeReadmeUpdater:
                 continue
 
             difficulty = self._get_difficulty(item)
+            submission_date = self._get_submission_date(solution_path)
             
             solutions.append({
                 "number": problem_num,
@@ -75,10 +76,12 @@ class LeetCodeReadmeUpdater:
                 "slug": problem_slug,
                 "path": solution_path.relative_to(self.repo_path).as_posix(),
                 "difficulty": difficulty,
+                "submission_date": submission_date,
+                "submission_datetime": solution_path.stat().st_mtime,
             })
         
-        # Sort solutions by problem number
-        solutions.sort(key=lambda s: s["number"])
+        # Sort solutions by submission date and time, then by problem number
+        solutions.sort(key=lambda s: (s["submission_datetime"], s["number"]))
         print(f"Found {len(solutions)} solved problems.")
         return solutions
 
@@ -104,6 +107,20 @@ class LeetCodeReadmeUpdater:
             
         return "Unknown"
 
+    def _get_submission_date(self, solution_file: Path):
+        """
+        Gets the submission date based on the file's modification time.
+        
+        Args:
+            solution_file (Path): The path to the solution file.
+            
+        Returns:
+            str: The submission date in YYYY-MM-DD format.
+        """
+        modification_time = solution_file.stat().st_mtime
+        submission_date = datetime.fromtimestamp(modification_time).date()
+        return submission_date.strftime("%Y-%m-%d")
+
     def update_readme(self, solutions):
         """
         Updates the main README.md file with the new stats and problem table.
@@ -117,8 +134,11 @@ class LeetCodeReadmeUpdater:
 
         print("Generating new README content...")
         stats_content = self._generate_stats(solutions)
-        difficulty_breakdown_content = self._generate_difficulty_breakdown(solutions) # NEW: Generate difficulty breakdown
+        difficulty_breakdown_content = self._generate_difficulty_breakdown(solutions)
+        daily_summary_content = self._generate_daily_summary(solutions)
+        recent_submissions_content = self._generate_recent_submissions(solutions)
         table_content = self._generate_table(solutions)
+        recent_submissions_content = self._generate_recent_submissions(solutions)  # NEW: Generate recent submissions
 
         readme_content = self.readme_path.read_text(encoding="utf-8")
 
@@ -138,10 +158,34 @@ class LeetCodeReadmeUpdater:
             flags=re.DOTALL # Ensure . matches newlines
         )
 
+        # Replace daily summary section (NEW)
+        readme_content = re.sub(
+            r'<!-- DAILY_SUMMARY_START -->(.|\n)*?<!-- DAILY_SUMMARY_END -->',
+            f'<!-- DAILY_SUMMARY_START -->\n{daily_summary_content}\n<!-- DAILY_SUMMARY_END -->',
+            readme_content,
+            flags=re.DOTALL # Ensure . matches newlines
+        )
+
+        # Replace recent submissions section
+        readme_content = re.sub(
+            r'<!-- RECENT_SUBMISSIONS_START -->(.|\n)*?<!-- RECENT_SUBMISSIONS_END -->',
+            f'<!-- RECENT_SUBMISSIONS_START -->\n{recent_submissions_content}\n<!-- RECENT_SUBMISSIONS_END -->',
+            readme_content,
+            flags=re.DOTALL # Ensure . matches newlines
+        )
+
         # Replace table section (UPDATED to use SOLUTIONS_TABLE_START/END)
         readme_content = re.sub(
             r'<!-- SOLUTIONS_TABLE_START -->(.|\n)*?<!-- SOLUTIONS_TABLE_END -->',
             f'<!-- SOLUTIONS_TABLE_START -->\n{table_content}\n<!-- SOLUTIONS_TABLE_END -->',
+            readme_content,
+            flags=re.DOTALL # Ensure . matches newlines
+        )
+        
+        # Replace recent submissions section (NEW)
+        readme_content = re.sub(
+            r'<!-- RECENT_SUBMISSIONS_START -->(.|\n)*?<!-- RECENT_SUBMISSIONS_END -->',
+            f'<!-- RECENT_SUBMISSIONS_START -->\n{recent_submissions_content}\n<!-- RECENT_SUBMISSIONS_END -->',
             readme_content,
             flags=re.DOTALL # Ensure . matches newlines
         )
@@ -220,39 +264,148 @@ class LeetCodeReadmeUpdater:
 
     def _generate_table(self, solutions):
         """
-        Generates the markdown table of solved problems,
-        matching the user's desired column order and adding LeetCode links.
+        Generates the markdown table of solved problems grouped by submission day,
+        with each day showing as "DAY X" with the problems submitted that day.
         
         Args:
-            solutions (list): The list of solved problems.
+            solutions (list): The list of solved problems sorted by submission date.
             
         Returns:
-            str: Markdown content for the problems table.
+            str: Markdown content for the problems table organized by days.
         """
         if not solutions:
-            # Updated default table to match user's header structure
             return "| # | Title | Difficulty | Solution | LeetCode Link |\n|---|-------|------------|----------|---------------|\n| - | No solutions yet | - | - | - |"
 
-        # Updated table header to match user's README.md
-        table_header = "| # | Title | Difficulty | Solution | LeetCode Link |\n|---|-------|------------|----------|---------------|"
-        table_rows = []
-        for s in solutions:
-            leetcode_url = f"https://leetcode.com/problems/{s['slug']}/" # Ensure trailing slash for consistency
+        # Group solutions by submission date
+        solutions_by_date = OrderedDict()
+        for solution in solutions:
+            sub_date = solution["submission_date"]
+            if sub_date not in solutions_by_date:
+                solutions_by_date[sub_date] = []
+            solutions_by_date[sub_date].append(solution)
+
+        # Generate the table content
+        table_content = []
+        day_counter = 1
+        
+        for date_str, date_solutions in solutions_by_date.items():
+            # Convert date string to a more readable format
+            try:
+                date_obj = datetime.strptime(date_str, "%Y-%m-%d").date()
+                formatted_date = date_obj.strftime("%B %d, %Y")  # e.g., "July 03, 2025"
+            except:
+                formatted_date = date_str
+                
+            # Add day header
+            table_content.append(f"\n### 📅 DAY {day_counter} - {formatted_date}")
+            table_content.append(f"*{len(date_solutions)} problem(s) solved*\n")
             
-            # Title linked to LeetCode problem
-            title_link = f"[{s['title']}]({leetcode_url})"
+            # Add table header for this day
+            table_header = "| # | Title | Difficulty | Solution | LeetCode Link |\n|---|-------|------------|----------|---------------|"
+            table_content.append(table_header)
             
-            # Link to the local solution file
-            solution_link = f"[{Path(s['path']).name}]({s['path']})"
+            # Add rows for this day's solutions
+            for solution in date_solutions:
+                leetcode_url = f"https://leetcode.com/problems/{solution['slug']}/"
+                title_link = f"[{solution['title']}]({leetcode_url})"
+                solution_link = f"[{Path(solution['path']).name}]({solution['path']})"
+                difficulty_badge = f"`{solution['difficulty']}`"
+                
+                row = f"| {solution['number']} | {title_link} | {difficulty_badge} | {solution_link} | [Link]({leetcode_url}) |"
+                table_content.append(row)
             
-            difficulty_badge = f"`{s['difficulty']}`"
+            day_counter += 1
+        
+        return "\n".join(table_content)
+
+    def _generate_daily_summary(self, solutions):
+        """
+        Generates a summary of problems solved each day.
+        
+        Args:
+            solutions (list): The list of solved problems sorted by submission date.
             
-            # Construct the row in the order: # | Title | Difficulty | Solution | LeetCode Link
-            # The LeetCode Link column will explicitly show "[Link]"
-            row = f"| {s['number']} | {title_link} | {difficulty_badge} | {solution_link} | [Link]({leetcode_url}) |"
-            table_rows.append(row)
+        Returns:
+            str: Markdown content for the daily summary.
+        """
+        if not solutions:
+            return "*No solutions yet. Start solving problems to see your daily progress!*"
+
+        # Group solutions by submission date
+        solutions_by_date = OrderedDict()
+        for solution in solutions:
+            sub_date = solution["submission_date"]
+            if sub_date not in solutions_by_date:
+                solutions_by_date[sub_date] = []
+            solutions_by_date[sub_date].append(solution)
+
+        summary_lines = []
+        day_counter = 1
+        
+        for date_str, date_solutions in solutions_by_date.items():
+            try:
+                date_obj = datetime.strptime(date_str, "%Y-%m-%d").date()
+                formatted_date = date_obj.strftime("%B %d, %Y")
+            except:
+                formatted_date = date_str
+                
+            # Count by difficulty for this day
+            easy_count = sum(1 for s in date_solutions if s["difficulty"] == "Easy")
+            medium_count = sum(1 for s in date_solutions if s["difficulty"] == "Medium")
+            hard_count = sum(1 for s in date_solutions if s["difficulty"] == "Hard")
             
-        return f"{table_header}\n" + "\n".join(table_rows)
+            difficulty_breakdown = []
+            if easy_count > 0:
+                difficulty_breakdown.append(f"{easy_count} Easy")
+            if medium_count > 0:
+                difficulty_breakdown.append(f"{medium_count} Medium")
+            if hard_count > 0:
+                difficulty_breakdown.append(f"{hard_count} Hard")
+            
+            breakdown_str = ", ".join(difficulty_breakdown) if difficulty_breakdown else "No problems"
+            
+            summary_lines.append(f"- **DAY {day_counter}** ({formatted_date}): {len(date_solutions)} problem(s) - {breakdown_str}")
+            day_counter += 1
+        
+        return "\n".join(summary_lines)
+
+    def _generate_recent_submissions(self, solutions, limit=5):
+        """
+        Generates a list of recent submissions (last N problems solved).
+        
+        Args:
+            solutions (list): The list of solved problems sorted by submission date.
+            limit (int): Maximum number of recent submissions to show.
+            
+        Returns:
+            str: Markdown content for recent submissions.
+        """
+        if not solutions:
+            return "*No recent submissions yet. Start solving problems to see your progress here!*"
+
+        # Get the most recent submissions (already sorted by date/time)
+        recent = solutions[-limit:] if len(solutions) > limit else solutions
+        recent.reverse()  # Show most recent first
+        
+        recent_lines = []
+        for solution in recent:
+            try:
+                # Get the submission datetime for display
+                submission_datetime = datetime.fromtimestamp(solution["submission_datetime"])
+                time_str = submission_datetime.strftime("%B %d, %Y at %I:%M %p")
+            except:
+                time_str = solution["submission_date"]
+            
+            leetcode_url = f"https://leetcode.com/problems/{solution['slug']}/"
+            solution_link = f"[{Path(solution['path']).name}]({solution['path']})"
+            difficulty_badge = f"`{solution['difficulty']}`"
+            
+            recent_lines.append(
+                f"- **#{solution['number']}** [{solution['title']}]({leetcode_url}) "
+                f"({difficulty_badge}) - {time_str} | [Solution]({solution['path']})"
+            )
+        
+        return "\n".join(recent_lines)
 
 
 if __name__ == "__main__":

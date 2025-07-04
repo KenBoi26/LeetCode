@@ -5,51 +5,11 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 ## 📊 Progress Overview
 
 <!-- LEETCODE_STATS_START -->
-
-<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-    <div style="display: inline-block; text-align: center; margin: 10px;">
-    <svg width="100" height="100" viewBox="0 0 36 36" style="display: block; margin: 0 auto;">
-        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none" stroke="#e9ecef" stroke-width="3.8" />
-        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none" stroke="#28a745" stroke-width="2.8"
-              stroke-dasharray="47.61904761904761, 100"
-              stroke-linecap="round"
-              transform="rotate(-90 18 18)" />
-        <text x="18" y="20.35" text-anchor="middle" font-size="0.6em" fill="#333" font-family="sans-serif">10</text>
-    </svg>
-    <p style="margin-top: 5px; font-size: 0.9em; color: #555; font-family: sans-serif;">Easy</p>
-</div>
-    <div style="display: inline-block; text-align: center; margin: 10px;">
-    <svg width="100" height="100" viewBox="0 0 36 36" style="display: block; margin: 0 auto;">
-        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none" stroke="#e9ecef" stroke-width="3.8" />
-        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none" stroke="#ffc107" stroke-width="2.8"
-              stroke-dasharray="47.61904761904761, 100"
-              stroke-linecap="round"
-              transform="rotate(-90 18 18)" />
-        <text x="18" y="20.35" text-anchor="middle" font-size="0.6em" fill="#333" font-family="sans-serif">10</text>
-    </svg>
-    <p style="margin-top: 5px; font-size: 0.9em; color: #555; font-family: sans-serif;">Medium</p>
-</div>
-    <div style="display: inline-block; text-align: center; margin: 10px;">
-    <svg width="100" height="100" viewBox="0 0 36 36" style="display: block; margin: 0 auto;">
-        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none" stroke="#e9ecef" stroke-width="3.8" />
-        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-              fill="none" stroke="#dc3545" stroke-width="2.8"
-              stroke-dasharray="4.761904761904762, 100"
-              stroke-linecap="round"
-              transform="rotate(-90 18 18)" />
-        <text x="18" y="20.35" text-anchor="middle" font-size="0.6em" fill="#333" font-family="sans-serif">1</text>
-    </svg>
-    <p style="margin-top: 5px; font-size: 0.9em; color: #555; font-family: sans-serif;">Hard</p>
-</div>
-</div>
+![Easy](https://img.shields.io/badge/Easy-10-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-10-orange?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-1-red?style=for-the-badge)
 
 **Total Solved: 21**
-
 <!-- LEETCODE_STATS_END -->
 
 ### 🎯 Difficulty Breakdown
@@ -59,38 +19,52 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 - **Hard**: 1/1 problems solved
 <!-- DIFFICULTY_BREAKDOWN_END -->
 
+## 📈 Daily Progress Summary
+
+<!-- DAILY_SUMMARY_START -->
+- **DAY 1** (July 03, 2025): 21 problem(s) - 10 Easy, 10 Medium, 1 Hard
+<!-- DAILY_SUMMARY_END -->
+
 ## 📚 Recent Submissions
 
 <!-- RECENT_SUBMISSIONS_START -->
-*No recent submissions yet. Start solving problems to see your progress here!*
+- **#88** [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (`Easy`) - July 03, 2025 at 07:27 PM | [Solution](88-merge-sorted-array/merge-sorted-array.cpp)
+- **#860** [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) (`Medium`) - July 03, 2025 at 07:27 PM | [Solution](860-design-circular-queue/design-circular-queue.cpp)
+- **#735** [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) (`Medium`) - July 03, 2025 at 07:27 PM | [Solution](735-asteroid-collision/asteroid-collision.cpp)
+- **#543** [Diameter Of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) (`Easy`) - July 03, 2025 at 07:27 PM | [Solution](543-diameter-of-binary-tree/diameter-of-binary-tree.cpp)
+- **#486** [Predict The Winner](https://leetcode.com/problems/predict-the-winner/) (`Medium`) - July 03, 2025 at 07:27 PM | [Solution](486-predict-the-winner/predict-the-winner.cpp)
 <!-- RECENT_SUBMISSIONS_END -->
 
 ## 🗂️ All Solutions
 
 <!-- SOLUTIONS_TABLE_START -->
+
+### 📅 DAY 1 - July 03, 2025
+*21 problem(s) solved*
+
 | # | Title | Difficulty | Solution | LeetCode Link |
 |---|-------|------------|----------|---------------|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | `Easy` | [two-sum.cpp](1-two-sum/two-sum.cpp) | [Link](https://leetcode.com/problems/two-sum/) |
-| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | `Easy` | [valid-parentheses.cpp](20-valid-parentheses/valid-parentheses.cpp) | [Link](https://leetcode.com/problems/valid-parentheses/) |
-| 23 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | `Hard` | [merge-k-sorted-lists.cpp](23-merge-k-sorted-lists/merge-k-sorted-lists.cpp) | [Link](https://leetcode.com/problems/merge-k-sorted-lists/) |
-| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | `Easy` | [merge-sorted-array.cpp](88-merge-sorted-array/merge-sorted-array.cpp) | [Link](https://leetcode.com/problems/merge-sorted-array/) |
 | 104 | [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | `Easy` | [maximum-depth-of-binary-tree.cpp](104-maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.cpp) | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
 | 142 | [Linked List Cycle Ii](https://leetcode.com/problems/linked-list-cycle-ii/) | `Medium` | [linked-list-cycle-ii.cpp](142-linked-list-cycle-ii/linked-list-cycle-ii.cpp) | [Link](https://leetcode.com/problems/linked-list-cycle-ii/) |
+| 1549 | [Longest Continuous Subarray With Absolute Diff Less Than Or Equal To Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | `Medium` | [longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp](1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp) | [Link](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
 | 160 | [Intersection Of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | `Easy` | [intersection-of-two-linked-lists.cpp](160-intersection-of-two-linked-lists/intersection-of-two-linked-lists.cpp) | [Link](https://leetcode.com/problems/intersection-of-two-linked-lists/) |
 | 199 | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | `Medium` | [binary-tree-right-side-view.cpp](199-binary-tree-right-side-view/binary-tree-right-side-view.cpp) | [Link](https://leetcode.com/problems/binary-tree-right-side-view/) |
+| 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | `Easy` | [valid-parentheses.cpp](20-valid-parentheses/valid-parentheses.cpp) | [Link](https://leetcode.com/problems/valid-parentheses/) |
 | 225 | [Implement Stack Using Queues](https://leetcode.com/problems/implement-stack-using-queues/) | `Easy` | [implement-stack-using-queues.cpp](225-implement-stack-using-queues/implement-stack-using-queues.cpp) | [Link](https://leetcode.com/problems/implement-stack-using-queues/) |
+| 23 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | `Hard` | [merge-k-sorted-lists.cpp](23-merge-k-sorted-lists/merge-k-sorted-lists.cpp) | [Link](https://leetcode.com/problems/merge-k-sorted-lists/) |
 | 235 | [Lowest Common Ancestor Of A Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | `Medium` | [lowest-common-ancestor-of-a-binary-search-tree.cpp](235-lowest-common-ancestor-of-a-binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.cpp) | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) |
 | 236 | [Lowest Common Ancestor Of A Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | `Medium` | [lowest-common-ancestor-of-a-binary-tree.cpp](236-lowest-common-ancestor-of-a-binary-tree/lowest-common-ancestor-of-a-binary-tree.cpp) | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
 | 303 | [Range Sum Query Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | `Easy` | [range-sum-query-immutable.cpp](303-range-sum-query-immutable/range-sum-query-immutable.cpp) | [Link](https://leetcode.com/problems/range-sum-query-immutable/) |
 | 347 | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | `Medium` | [top-k-frequent-elements.cpp](347-top-k-frequent-elements/top-k-frequent-elements.cpp) | [Link](https://leetcode.com/problems/top-k-frequent-elements/) |
+| 3600 | [Find The K Th Character In String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) | `Easy` | [find-the-k-th-character-in-string-game-i.cpp](3600-find-the-k-th-character-in-string-game-i/find-the-k-th-character-in-string-game-i.cpp) | [Link](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) |
+| 3617 | [Find The Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) | `Easy` | [find-the-original-typed-string-i.cpp](3617-find-the-original-typed-string-i/find-the-original-typed-string-i.cpp) | [Link](https://leetcode.com/problems/find-the-original-typed-string-i/) |
 | 451 | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | `Medium` | [sort-characters-by-frequency.cpp](451-sort-characters-by-frequency/sort-characters-by-frequency.cpp) | [Link](https://leetcode.com/problems/sort-characters-by-frequency/) |
 | 486 | [Predict The Winner](https://leetcode.com/problems/predict-the-winner/) | `Medium` | [predict-the-winner.cpp](486-predict-the-winner/predict-the-winner.cpp) | [Link](https://leetcode.com/problems/predict-the-winner/) |
 | 543 | [Diameter Of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | `Easy` | [diameter-of-binary-tree.cpp](543-diameter-of-binary-tree/diameter-of-binary-tree.cpp) | [Link](https://leetcode.com/problems/diameter-of-binary-tree/) |
 | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | `Medium` | [asteroid-collision.cpp](735-asteroid-collision/asteroid-collision.cpp) | [Link](https://leetcode.com/problems/asteroid-collision/) |
 | 860 | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) | `Medium` | [design-circular-queue.cpp](860-design-circular-queue/design-circular-queue.cpp) | [Link](https://leetcode.com/problems/design-circular-queue/) |
-| 1549 | [Longest Continuous Subarray With Absolute Diff Less Than Or Equal To Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | `Medium` | [longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp](1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp) | [Link](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
-| 3600 | [Find The K Th Character In String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) | `Easy` | [find-the-k-th-character-in-string-game-i.cpp](3600-find-the-k-th-character-in-string-game-i/find-the-k-th-character-in-string-game-i.cpp) | [Link](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) |
-| 3617 | [Find The Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) | `Easy` | [find-the-original-typed-string-i.cpp](3617-find-the-original-typed-string-i/find-the-original-typed-string-i.cpp) | [Link](https://leetcode.com/problems/find-the-original-typed-string-i/) |
+| 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | `Easy` | [merge-sorted-array.cpp](88-merge-sorted-array/merge-sorted-array.cpp) | [Link](https://leetcode.com/problems/merge-sorted-array/) |
 <!-- SOLUTIONS_TABLE_END -->
 
 ## 📁 Repository Structure
