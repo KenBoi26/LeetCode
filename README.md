@@ -5,17 +5,17 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 ## 📊 Progress Overview
 
 <!-- LEETCODE_STATS_START -->
-![Easy](https://img.shields.io/badge/Easy-10-green?style=for-the-badge)
-![Medium](https://img.shields.io/badge/Medium-10-orange?style=for-the-badge)
+![Easy](https://img.shields.io/badge/Easy-13-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-11-orange?style=for-the-badge)
 ![Hard](https://img.shields.io/badge/Hard-1-red?style=for-the-badge)
 
-**Total Solved: 21**
+**Total Solved: 25**
 <!-- LEETCODE_STATS_END -->
 
 ### 🎯 Difficulty Breakdown
 <!-- DIFFICULTY_BREAKDOWN_START -->
-- **Easy**: 10/10 problems solved
-- **Medium**: 10/10 problems solved
+- **Easy**: 13/13 problems solved
+- **Medium**: 11/11 problems solved
 - **Hard**: 1/1 problems solved
 <!-- DIFFICULTY_BREAKDOWN_END -->
 
@@ -23,16 +23,17 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 
 <!-- DAILY_SUMMARY_START -->
 - **DAY 1** (July 03, 2025): 21 problem(s) - 10 Easy, 10 Medium, 1 Hard
+- **DAY 2** (July 04, 2025): 4 problem(s) - 3 Easy, 1 Medium
 <!-- DAILY_SUMMARY_END -->
 
 ## 📚 Recent Submissions
 
 <!-- RECENT_SUBMISSIONS_START -->
+- **#318** [Maximum Product Of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) (`Medium`) - July 04, 2025 at 11:50 AM | [Solution](318-maximum-product-of-word-lengths/maximum-product-of-word-lengths.cpp)
+- **#268** [Missing Number](https://leetcode.com/problems/missing-number/) (`Easy`) - July 04, 2025 at 11:50 AM | [Solution](268-missing-number/missing-number.cpp)
+- **#191** [Number Of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) (`Easy`) - July 04, 2025 at 11:50 AM | [Solution](191-number-of-1-bits/number-of-1-bits.cpp)
+- **#136** [Single Number](https://leetcode.com/problems/single-number/) (`Easy`) - July 04, 2025 at 11:50 AM | [Solution](136-single-number/single-number.cpp)
 - **#88** [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) (`Easy`) - July 03, 2025 at 07:27 PM | [Solution](88-merge-sorted-array/merge-sorted-array.cpp)
-- **#860** [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) (`Medium`) - July 03, 2025 at 07:27 PM | [Solution](860-design-circular-queue/design-circular-queue.cpp)
-- **#735** [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) (`Medium`) - July 03, 2025 at 07:27 PM | [Solution](735-asteroid-collision/asteroid-collision.cpp)
-- **#543** [Diameter Of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) (`Easy`) - July 03, 2025 at 07:27 PM | [Solution](543-diameter-of-binary-tree/diameter-of-binary-tree.cpp)
-- **#486** [Predict The Winner](https://leetcode.com/problems/predict-the-winner/) (`Medium`) - July 03, 2025 at 07:27 PM | [Solution](486-predict-the-winner/predict-the-winner.cpp)
 <!-- RECENT_SUBMISSIONS_END -->
 
 ## 🗂️ All Solutions
@@ -65,6 +66,16 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 | 735 | [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) | `Medium` | [asteroid-collision.cpp](735-asteroid-collision/asteroid-collision.cpp) | [Link](https://leetcode.com/problems/asteroid-collision/) |
 | 860 | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) | `Medium` | [design-circular-queue.cpp](860-design-circular-queue/design-circular-queue.cpp) | [Link](https://leetcode.com/problems/design-circular-queue/) |
 | 88 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | `Easy` | [merge-sorted-array.cpp](88-merge-sorted-array/merge-sorted-array.cpp) | [Link](https://leetcode.com/problems/merge-sorted-array/) |
+
+### 📅 DAY 2 - July 04, 2025
+*4 problem(s) solved*
+
+| # | Title | Difficulty | Solution | LeetCode Link |
+|---|-------|------------|----------|---------------|
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | `Easy` | [single-number.cpp](136-single-number/single-number.cpp) | [Link](https://leetcode.com/problems/single-number/) |
+| 191 | [Number Of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | `Easy` | [number-of-1-bits.cpp](191-number-of-1-bits/number-of-1-bits.cpp) | [Link](https://leetcode.com/problems/number-of-1-bits/) |
+| 268 | [Missing Number](https://leetcode.com/problems/missing-number/) | `Easy` | [missing-number.cpp](268-missing-number/missing-number.cpp) | [Link](https://leetcode.com/problems/missing-number/) |
+| 318 | [Maximum Product Of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) | `Medium` | [maximum-product-of-word-lengths.cpp](318-maximum-product-of-word-lengths/maximum-product-of-word-lengths.cpp) | [Link](https://leetcode.com/problems/maximum-product-of-word-lengths/) |
 <!-- SOLUTIONS_TABLE_END -->
 
 ## 📁 Repository Structure
