@@ -19,12 +19,107 @@ Welcome to my LeetCode journey! This repository automatically tracks my progress
 - **Hard**: 1/1 problems solved
 <!-- DIFFICULTY_BREAKDOWN_END -->
 
-## 📈 Daily Progress Summary
+## 📈 Topic Breakdown
 
-<!-- DAILY_SUMMARY_START -->
-- **DAY 1** (July 03, 2025): 21 problem(s) - 10 Easy, 10 Medium, 1 Hard
-- **DAY 2** (July 04, 2025): 4 problem(s) - 3 Easy, 1 Medium
-<!-- DAILY_SUMMARY_END -->
+<!-- TOPIC_BREAKDOWN_START -->
+### 📚 Problems by Topic
+
+#### 🎯 Binary Tree
+**5 problems** - 🟢 2 Easy | 🟡 3 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟢 **#104** [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - [Solution](104-maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.cpp)
+- 🟡 **#199** [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) - [Solution](199-binary-tree-right-side-view/binary-tree-right-side-view.cpp)
+- 🟡 **#235** [Lowest Common Ancestor Of A Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) - [Solution](235-lowest-common-ancestor-of-a-binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.cpp)
+- 🟡 **#236** [Lowest Common Ancestor Of A Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) - [Solution](236-lowest-common-ancestor-of-a-binary-tree/lowest-common-ancestor-of-a-binary-tree.cpp)
+- 🟢 **#543** [Diameter Of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) - [Solution](543-diameter-of-binary-tree/diameter-of-binary-tree.cpp)
+</details>
+
+#### 🎯 Math & Bit Manipulation
+**4 problems** - 🟢 3 Easy | 🟡 1 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟢 **#136** [Single Number](https://leetcode.com/problems/single-number/) - [Solution](136-single-number/single-number.cpp)
+- 🟢 **#191** [Number Of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) - [Solution](191-number-of-1-bits/number-of-1-bits.cpp)
+- � **#268** [Missing Number](https://leetcode.com/problems/missing-number/) - [Solution](268-missing-number/missing-number.cpp)
+- 🟡 **#318** [Maximum Product Of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/) - [Solution](318-maximum-product-of-word-lengths/maximum-product-of-word-lengths.cpp)
+</details>
+
+#### 🎯 Stack & Queue
+**4 problems** - 🟢 2 Easy | 🟡 2 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟢 **#20** [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](20-valid-parentheses/valid-parentheses.cpp)
+- 🟢 **#225** [Implement Stack Using Queues](https://leetcode.com/problems/implement-stack-using-queues/) - [Solution](225-implement-stack-using-queues/implement-stack-using-queues.cpp)
+- � **#735** [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/) - [Solution](735-asteroid-collision/asteroid-collision.cpp)
+- 🟡 **#860** [Design Circular Queue](https://leetcode.com/problems/design-circular-queue/) - [Solution](860-design-circular-queue/design-circular-queue.cpp)
+</details>
+
+#### 🎯 Array & String
+**4 problems** - 🟢 4 Easy
+<details>
+<summary>View Problems</summary>
+
+- 🟢 **#1** [Two Sum](https://leetcode.com/problems/two-sum/) - [Solution](1-two-sum/two-sum.cpp)
+- 🟢 **#88** [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) - [Solution](88-merge-sorted-array/merge-sorted-array.cpp)
+- 🟢 **#3600** [Find The K Th Character In String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) - [Solution](3600-find-the-k-th-character-in-string-game-i/find-the-k-th-character-in-string-game-i.cpp)
+- 🟢 **#3617** [Find The Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) - [Solution](3617-find-the-original-typed-string-i/find-the-original-typed-string-i.cpp)
+</details>
+
+#### 🎯 Hash Table
+**2 problems** - 🟡 2 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟡 **#347** [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) - [Solution](347-top-k-frequent-elements/top-k-frequent-elements.cpp)
+- 🟡 **#451** [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) - [Solution](451-sort-characters-by-frequency/sort-characters-by-frequency.cpp)
+</details>
+
+#### 🎯 Linked List
+**2 problems** - 🟢 1 Easy | 🟡 1 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟡 **#142** [Linked List Cycle Ii](https://leetcode.com/problems/linked-list-cycle-ii/) - [Solution](142-linked-list-cycle-ii/linked-list-cycle-ii.cpp)
+- 🟢 **#160** [Intersection Of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) - [Solution](160-intersection-of-two-linked-lists/intersection-of-two-linked-lists.cpp)
+</details>
+
+#### 🎯 Sliding Window
+**1 problem** - 🟡 1 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟡 **#1549** [Longest Continuous Subarray With Absolute Diff Less Than Or Equal To Limit](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) - [Solution](1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp)
+</details>
+
+#### 🎯 Heap & Priority Queue
+**1 problem** - 🔴 1 Hard
+<details>
+<summary>View Problems</summary>
+
+- 🔴 **#23** [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - [Solution](23-merge-k-sorted-lists/merge-k-sorted-lists.cpp)
+</details>
+
+#### 🎯 Design & Data Structures
+**1 problem** - 🟢 1 Easy
+<details>
+<summary>View Problems</summary>
+
+- 🟢 **#303** [Range Sum Query Immutable](https://leetcode.com/problems/range-sum-query-immutable/) - [Solution](303-range-sum-query-immutable/range-sum-query-immutable.cpp)
+</details>
+
+#### 🎯 Dynamic Programming
+**1 problem** - 🟡 1 Medium
+<details>
+<summary>View Problems</summary>
+
+- 🟡 **#486** [Predict The Winner](https://leetcode.com/problems/predict-the-winner/) - [Solution](486-predict-the-winner/predict-the-winner.cpp)
+</details>
+
+<!-- TOPIC_BREAKDOWN_END -->
 
 ## 📚 Recent Submissions
 
