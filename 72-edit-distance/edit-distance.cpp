@@ -19,6 +19,7 @@ public:
                 if(word1[i] == word2[j]){
                     dp[i][j] = dp[i+1][j+1];
                 }else{
+                    // replace, delete, insertion respectively
                     dp[i][j] = min(dp[i+1][j+1], min(dp[i+1][j], dp[i][j+1])) + 1;
                 }
             }
