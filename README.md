@@ -49,9 +49,11 @@
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
 | Valid Parentheses | [20-valid-parentheses/valid-parentheses.cpp](20-valid-parentheses/valid-parentheses.cpp) | Easy | [LeetCode](https://leetcode.com/problems/valid-parentheses/) |
+| Min Stack | [155-min-stack/min-stack.cpp](155-min-stack/min-stack.cpp) | Medium | [LeetCode](https://leetcode.com/problems/min-stack/) |
 | Implement Stack Using Queues | [225-implement-stack-using-queues/implement-stack-using-queues.cpp](225-implement-stack-using-queues/implement-stack-using-queues.cpp) | Easy | [LeetCode](https://leetcode.com/problems/implement-stack-using-queues/) |
 | Asteroid Collision | [735-asteroid-collision/asteroid-collision.cpp](735-asteroid-collision/asteroid-collision.cpp) | Medium | [LeetCode](https://leetcode.com/problems/asteroid-collision/) |
 | Design Circular Queue | [860-design-circular-queue/design-circular-queue.cpp](860-design-circular-queue/design-circular-queue.cpp) | Medium | [LeetCode](https://leetcode.com/problems/design-circular-queue/) |
+| Egg Drop With 2 Eggs and N Floors | [2031-egg-drop-with-2-eggs-and-n-floors/egg-drop-with-2-eggs-and-n-floors.cpp](2031-egg-drop-with-2-eggs-and-n-floors/egg-drop-with-2-eggs-and-n-floors.cpp) | Hard | [LeetCode](https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/) |
 
 ### Binary Tree
 
@@ -94,6 +96,7 @@
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
 | Range Sum Query Immutable | [303-range-sum-query-immutable/range-sum-query-immutable.cpp](303-range-sum-query-immutable/range-sum-query-immutable.cpp) | Easy | [LeetCode](https://leetcode.com/problems/range-sum-query-immutable/) |
+| Finding Pairs With a Certain Sum | [1995-finding-pairs-with-a-certain-sum/finding-pairs-with-a-certain-sum.cpp](1995-finding-pairs-with-a-certain-sum/finding-pairs-with-a-certain-sum.cpp) | Medium | [LeetCode](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/) |
 
 ### Dynamic Programming
 
@@ -103,5 +106,5 @@
 
 ---
 
-**Note:** This README is automatically generated/updated. Last updated: July 6, 2025
-**1 problem** - 🟢 1 Easy
+**Note:** This README is automatically generated/updated. Last updated: July 14, 2025
+**31 problems** - 🟢 16 Easy, 🟠 13 Medium, 🔴 2 Hard
