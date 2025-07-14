@@ -11,18 +11,11 @@
 class Solution {
 public:
     int getDecimalValue(ListNode* head) {
-        stack<int> st;
-        ListNode* current = head;
-        while(current!=nullptr){
-            st.push(current->val);
-            current = current->next;
-        }
-        int i=0, ans=0;
-
-        while(!st.empty()){
-            ans = ans + st.top()*pow(2,i);
-            i++;
-            st.pop();
+        int ans = 0;
+        ListNode* curr = head;
+        while(curr!=nullptr){
+            ans = ans*2 + curr->val;
+            curr = curr->next;
         }
 
         return ans;
