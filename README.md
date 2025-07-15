@@ -2,11 +2,11 @@
 
 ## 📊 Progress Summary
 
-![Easy](https://img.shields.io/badge/Easy-22-green?style=for-the-badge)
-![Medium](https://img.shields.io/badge/Medium-19-orange?style=for-the-badge)
-![Hard](https://img.shields.io/badge/Hard-3-red?style=for-the-badge)
+![Easy](https://img.shields.io/badge/Easy-23-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-20-orange?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-4-red?style=for-the-badge)
 
-**Total Solved:** 44
+**Total Solved:** 47
 
 ---
 
@@ -37,6 +37,8 @@
 | Encode and Decode Strings | [271-encode-and-decode-strings/encode-and-decode-strings.cpp](271-encode-and-decode-strings/encode-and-decode-strings.cpp) | Medium | [LeetCode](https://leetcode.com/problems/encode-and-decode-strings/) |
 | Group Anagrams | [49-group-anagrams/group-anagrams.cpp](49-group-anagrams/group-anagrams.cpp) | Medium | [LeetCode](https://leetcode.com/problems/group-anagrams/) |
 | Longest Common Subsequence | [1250-longest-common-subsequence/longest-common-subsequence.cpp](1250-longest-common-subsequence/longest-common-subsequence.cpp) | Medium | [LeetCode](https://leetcode.com/problems/longest-common-subsequence/) |
+| Best Time to Buy and Sell Stock II | [122-best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.cpp](122-best-time-to-buy-and-sell-stock-ii/best-time-to-buy-and-sell-stock-ii.cpp) | Medium | [LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) |
+| Valid Word | [3396-valid-word/valid-word.cpp](3396-valid-word/valid-word.cpp) | Easy | [LeetCode](https://leetcode.com/problems/valid-word/) |
 
 ### Math & Bit Manipulation
 | Problem Name | My Solution | Difficulty | LeetCode Link |
@@ -91,6 +93,11 @@
 | :----------- | :---------- | :--------- | :------------ |
 | Merge K Sorted Lists | [23-merge-k-sorted-lists/merge-k-sorted-lists.cpp](23-merge-k-sorted-lists/merge-k-sorted-lists.cpp) | Hard | [LeetCode](https://leetcode.com/problems/merge-k-sorted-lists/) |
 
+### BFS & Graph
+| Problem Name | My Solution | Difficulty | LeetCode Link |
+| :----------- | :---------- | :--------- | :------------ |
+| Word Ladder | [127-word-ladder/word-ladder.cpp](127-word-ladder/word-ladder.cpp) | Hard | [LeetCode](https://leetcode.com/problems/word-ladder/) |
+
 ### Design & Data Structures
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
@@ -111,5 +118,5 @@
 
 ---
 
-**Note:** This README is automatically generated/updated. Last updated: July 14, 2025
-**44 problems** - 🟢 22 Easy, 🟠 19 Medium, 🔴 3 Hard
+**Note:** This README is automatically generated/updated. Last updated: July 15, 2025
+**47 problems** - 🟢 23 Easy, 🟠 20 Medium, 🔴 4 Hard
