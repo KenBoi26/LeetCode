@@ -2,11 +2,12 @@
 
 ## 📊 Progress Summary
 
-![Easy](https://img.shields.io/badge/Easy-23-green?style=for-the-badge)
-![Medium](https://img.shields.io/badge/Medium-20-orange?style=for-the-badge)
-![Hard](https://img.shields.io/badge/Hard-4-red?style=for-the-badge)
+![Easy](https://img.shields.io/badge/Easy-25-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-37-orange?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-2-red?style=for-the-badge)
 
-**Total Solved:** 47
+**Total Problems Solved:** 64  
+**Total Solutions:** 73 (58 C++ + 15 Python)
 
 ---
 
@@ -14,12 +15,14 @@
 
 | Milestone | Status |
 |-----------|--------|
-| 🔥 Solved 50 Easy Questions | ⏳ Pending |
-| 🎯 Total 100 Questions Solved | ⏳ Pending |
+| 🔥 Solved 50 Easy Questions | ⏳ Pending (25/50) |
+| 🎯 Total 100 Questions Solved | ⏳ Pending (64/100) |
 | 🏆 Completed Top Interview 150 | ⏳ Pending |
 | 📈 Average 5 Questions/Week | ⏳ Pending |
 | ✅ First Hard Problem Solved | ✅ Achieved |
 | ✅ 25 Problems Solved | ✅ Achieved |
+| ✅ 40 Problems Solved | ✅ Achieved |
+| ✅ 50 Problems Solved | ✅ Achieved |
 
 ---
 
@@ -118,5 +121,6 @@
 
 ---
 
-**Note:** This README is automatically generated/updated. Last updated: July 15, 2025
-**47 problems** - 🟢 23 Easy, 🟠 20 Medium, 🔴 4 Hard
+**Note:** This README is automatically generated/updated. Last updated: July 24, 2025
+**64 problems** - 🟢 25 Easy, 🟠 37 Medium, 🔴 2 Hard  
+**73 total solutions** - 58 C++ + 15 Python
