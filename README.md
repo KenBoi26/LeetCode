@@ -2,12 +2,12 @@
 
 ## 📊 Progress Summary
 
-![Easy](https://img.shields.io/badge/Easy-25-green?style=for-the-badge)
-![Medium](https://img.shields.io/badge/Medium-37-orange?style=for-the-badge)
-![Hard](https://img.shields.io/badge/Hard-2-red?style=for-the-badge)
+![Easy](https://img.shields.io/badge/Easy-26-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-39-orange?style=for-the-badge)
+![Hard](https://img.shields.io/badge/Hard-3-red?style=for-the-badge)
 
-**Total Problems Solved:** 64  
-**Total Solutions:** 73 (58 C++ + 15 Python)
+**Total Problems Solved:** 69  
+**Total Solutions:** 78 (62 C++ + 16 Python)
 
 ---
 
@@ -15,8 +15,8 @@
 
 | Milestone | Status |
 |-----------|--------|
-| 🔥 Solved 50 Easy Questions | ⏳ Pending (25/50) |
-| 🎯 Total 100 Questions Solved | ⏳ Pending (64/100) |
+| 🔥 Solved 50 Easy Questions | ⏳ Pending (26/50) |
+| 🎯 Total 100 Questions Solved | ⏳ Pending (69/100) |
 | 🏆 Completed Top Interview 150 | ⏳ Pending |
 | 📈 Average 5 Questions/Week | ⏳ Pending |
 | ✅ First Hard Problem Solved | ✅ Achieved |
@@ -32,6 +32,10 @@
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
 | Two Sum | [1-two-sum/two-sum.cpp](1-two-sum/two-sum.cpp) | Easy | [LeetCode](https://leetcode.com/problems/two-sum/) |
+| 3Sum | [15-3sum/3sum.cpp](15-3sum/3sum.cpp) | Medium | [LeetCode](https://leetcode.com/problems/3sum/) |
+| Longest Substring Without Repeating Characters | [3-longest-substring-without-repeating-characters/longest-substring-without-repeating-characters.cpp](3-longest-substring-without-repeating-characters/longest-substring-without-repeating-characters.cpp) | Medium | [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) |
+| Container With Most Water | [11-container-with-most-water/container-with-most-water.cpp](11-container-with-most-water/container-with-most-water.cpp) | Medium | [LeetCode](https://leetcode.com/problems/container-with-most-water/) |
+| Two Sum II Input Array Is Sorted | [167-two-sum-ii-input-array-is-sorted/two-sum-ii-input-array-is-sorted.cpp](167-two-sum-ii-input-array-is-sorted/two-sum-ii-input-array-is-sorted.cpp) | Medium | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) |
 | Merge Sorted Array | [88-merge-sorted-array/merge-sorted-array.cpp](88-merge-sorted-array/merge-sorted-array.cpp) | Easy | [LeetCode](https://leetcode.com/problems/merge-sorted-array/) |
 | Find The K Th Character In String Game I | [3600-find-the-k-th-character-in-string-game-i/find-the-k-th-character-in-string-game-i.cpp](3600-find-the-k-th-character-in-string-game-i/find-the-k-th-character-in-string-game-i.cpp) | Easy | [LeetCode](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/) |
 | Find The Original Typed String I | [3617-find-the-original-typed-string-i/find-the-original-typed-string-i.cpp](3617-find-the-original-typed-string-i/find-the-original-typed-string-i.cpp) | Easy | [LeetCode](https://leetcode.com/problems/find-the-original-typed-string-i/) |
@@ -58,7 +62,10 @@
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
 | Valid Parentheses | [20-valid-parentheses/valid-parentheses.cpp](20-valid-parentheses/valid-parentheses.cpp) | Easy | [LeetCode](https://leetcode.com/problems/valid-parentheses/) |
+| Generate Parentheses | [22-generate-parentheses/generate-parentheses.cpp](22-generate-parentheses/generate-parentheses.cpp) | Medium | [LeetCode](https://leetcode.com/problems/generate-parentheses/) |
+| Evaluate Reverse Polish Notation | [150-evaluate-reverse-polish-notation/evaluate-reverse-polish-notation.cpp](150-evaluate-reverse-polish-notation/evaluate-reverse-polish-notation.cpp) | Medium | [LeetCode](https://leetcode.com/problems/evaluate-reverse-polish-notation/) |
 | Min Stack | [155-min-stack/min-stack.cpp](155-min-stack/min-stack.cpp) | Medium | [LeetCode](https://leetcode.com/problems/min-stack/) |
+| Daily Temperatures | [739-daily-temperatures/daily-temperatures.cpp](739-daily-temperatures/daily-temperatures.cpp) | Medium | [LeetCode](https://leetcode.com/problems/daily-temperatures/) |
 | Implement Stack Using Queues | [225-implement-stack-using-queues/implement-stack-using-queues.cpp](225-implement-stack-using-queues/implement-stack-using-queues.cpp) | Easy | [LeetCode](https://leetcode.com/problems/implement-stack-using-queues/) |
 | Asteroid Collision | [735-asteroid-collision/asteroid-collision.cpp](735-asteroid-collision/asteroid-collision.cpp) | Medium | [LeetCode](https://leetcode.com/problems/asteroid-collision/) |
 | Design Circular Queue | [860-design-circular-queue/design-circular-queue.cpp](860-design-circular-queue/design-circular-queue.cpp) | Medium | [LeetCode](https://leetcode.com/problems/design-circular-queue/) |
@@ -90,6 +97,12 @@
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
 | Longest Continuous Subarray With Absolute Diff ≤ Limit | [1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp](1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp) | Medium | [LeetCode](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
+| Longest Repeating Character Replacement | [424-longest-repeating-character-replacement/longest-repeating-character-replacement.cpp](424-longest-repeating-character-replacement/longest-repeating-character-replacement.cpp) | Medium | [LeetCode](https://leetcode.com/problems/longest-repeating-character-replacement/) |
+
+### Backtracking & Recursion
+| Problem Name | My Solution | Difficulty | LeetCode Link |
+| :----------- | :---------- | :--------- | :------------ |
+| Subsets | [78-subsets/subsets.cpp](78-subsets/subsets.cpp) | Medium | [LeetCode](https://leetcode.com/problems/subsets/) |
 
 ### Heap & Priority Queue
 | Problem Name | My Solution | Difficulty | LeetCode Link |
@@ -119,8 +132,16 @@
 | Target Sum | [494-target-sum/target-sum.cpp](494-target-sum/target-sum.cpp) | Medium | [LeetCode](https://leetcode.com/problems/target-sum/) |
 | Decode Ways | [91-decode-ways/decode-ways.cpp](91-decode-ways/decode-ways.cpp) | Medium | [LeetCode](https://leetcode.com/problems/decode-ways/) |
 
+### Binary Search & Search
+| Problem Name | My Solution | Difficulty | LeetCode Link |
+| :----------- | :---------- | :--------- | :------------ |
+| Binary Search | [792-binary-search/binary-search.cpp](792-binary-search/binary-search.cpp) | Easy | [LeetCode](https://leetcode.com/problems/binary-search/) |
+| Search in Rotated Sorted Array | [33-search-in-rotated-sorted-array/search-in-rotated-sorted-array.cpp](33-search-in-rotated-sorted-array/search-in-rotated-sorted-array.cpp) | Medium | [LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array/) |
+| Search a 2D Matrix | [74-search-a-2d-matrix/search-a-2d-matrix.cpp](74-search-a-2d-matrix/search-a-2d-matrix.cpp) | Medium | [LeetCode](https://leetcode.com/problems/search-a-2d-matrix/) |
+| Koko Eating Bananas | [907-koko-eating-bananas/koko-eating-bananas.cpp](907-koko-eating-bananas/koko-eating-bananas.cpp) | Medium | [LeetCode](https://leetcode.com/problems/koko-eating-bananas/) |
+
 ---
 
-**Note:** This README is automatically generated/updated. Last updated: July 24, 2025
-**64 problems** - 🟢 25 Easy, 🟠 37 Medium, 🔴 2 Hard  
-**73 total solutions** - 58 C++ + 15 Python
+**Note:** This README is automatically generated/updated. Last updated: July 26, 2025
+**69 problems** - 🟢 26 Easy, 🟠 39 Medium, 🔴 3 Hard  
+**78 total solutions** - 62 C++ + 16 Python
