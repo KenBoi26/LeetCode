@@ -3,11 +3,13 @@
 ## 📊 Progress Summary
 
 ![Easy](https://img.shields.io/badge/Easy-26-green?style=for-the-badge)
-![Medium](https://img.shields.io/badge/Medium-39-orange?style=for-the-badge)
+![Medium](https://img**Note:** This README is automatically generated/updated. Last updated: July 28, 2025
+**70 problems** - 🟢 26 Easy, 🟠 40 Medium, 🔴 3 Hard  
+**80 total solutions** - 63 C++ + 17 Pythonields.io/badge/Medium-40-orange?style=for-the-badge)
 ![Hard](https://img.shields.io/badge/Hard-3-red?style=for-the-badge)
 
-**Total Problems Solved:** 69  
-**Total Solutions:** 78 (62 C++ + 16 Python)
+**Total Problems Solved:** 70  
+**Total Solutions:** 80 (63 C++ + 17 Python)
 
 ---
 
@@ -16,7 +18,7 @@
 | Milestone | Status |
 |-----------|--------|
 | 🔥 Solved 50 Easy Questions | ⏳ Pending (26/50) |
-| 🎯 Total 100 Questions Solved | ⏳ Pending (69/100) |
+| 🎯 Total 100 Questions Solved | ⏳ Pending (70/100) |
 | 🏆 Completed Top Interview 150 | ⏳ Pending |
 | 📈 Average 5 Questions/Week | ⏳ Pending |
 | ✅ First Hard Problem Solved | ✅ Achieved |
@@ -79,6 +81,7 @@
 | Lowest Common Ancestor Of A Binary Search Tree | [235-lowest-common-ancestor-of-a-binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.cpp](235-lowest-common-ancestor-of-a-binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.cpp) | Medium | [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) |
 | Lowest Common Ancestor Of A Binary Tree | [236-lowest-common-ancestor-of-a-binary-tree/lowest-common-ancestor-of-a-binary-tree.cpp](236-lowest-common-ancestor-of-a-binary-tree/lowest-common-ancestor-of-a-binary-tree.cpp) | Medium | [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
 | Diameter Of Binary Tree | [543-diameter-of-binary-tree/diameter-of-binary-tree.cpp](543-diameter-of-binary-tree/diameter-of-binary-tree.cpp) | Easy | [LeetCode](https://leetcode.com/problems/diameter-of-binary-tree/) |
+| Balance a Binary Search Tree | [1285-balance-a-binary-search-tree/balance-a-binary-search-tree.cpp](1285-balance-a-binary-search-tree/balance-a-binary-search-tree.cpp) | Medium | [LeetCode](https://leetcode.com/problems/balance-a-binary-search-tree/) |
 
 ### Hash Table
 | Problem Name | My Solution | Difficulty | LeetCode Link |
@@ -144,4 +147,4 @@
 
 **Note:** This README is automatically generated/updated. Last updated: July 26, 2025
 **69 problems** - 🟢 26 Easy, 🟠 39 Medium, 🔴 3 Hard  
-**78 total solutions** - 62 C++ + 16 Python
+**78 total solutions** - 62 C++ , 16 Python
