@@ -12,14 +12,13 @@
 
 class Solution {
 public:
-    int maxDepth(TreeNode* root) {
-        if(!root){
-            return 0;
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p == nullptr || q == nullptr){
+            if(p!=q){
+                return false;
+            }
+            return true;
         }
-        int left_max = 1 + maxDepth(root->left);
-        int right_max = 1 + maxDepth(root->right);
-        int maxi = max(left_max, right_max);
-
-        return maxi;
+        return p->val==q->val && isSameTree(p->left, q->left)&& isSameTree(p->right, q->right);
     }
 };
