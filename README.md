@@ -2,14 +2,12 @@
 
 ## 📊 Progress Summary
 
-![Easy](https://img.shields.io/badge/Easy-26-green?style=for-the-badge)
-![Medium](https://img**Note:** This README is automatically generated/updated. Last updated: July 28, 2025
-**70 problems** - 🟢 26 Easy, 🟠 40 Medium, 🔴 3 Hard  
-**80 total solutions** - 63 C++ + 17 Pythonields.io/badge/Medium-40-orange?style=for-the-badge)
+![Easy](https://img.shields.io/badge/Easy-32-green?style=for-the-badge)
+![Medium](https://img.shields.io/badge/Medium-46-orange?style=for-the-badge)
 ![Hard](https://img.shields.io/badge/Hard-3-red?style=for-the-badge)
 
-**Total Problems Solved:** 70  
-**Total Solutions:** 80 (63 C++ + 17 Python)
+**Total Problems Solved:** 82  
+**Total Solutions:** 98 (72 C++ + 26 Python)
 
 ---
 
@@ -17,14 +15,16 @@
 
 | Milestone | Status |
 |-----------|--------|
-| 🔥 Solved 50 Easy Questions | ⏳ Pending (26/50) |
-| 🎯 Total 100 Questions Solved | ⏳ Pending (70/100) |
+| 🔥 Solved 50 Easy Questions | ⏳ Pending (32/50) |
+| 🎯 Total 100 Questions Solved | ⏳ Pending (82/100) |
 | 🏆 Completed Top Interview 150 | ⏳ Pending |
 | 📈 Average 5 Questions/Week | ⏳ Pending |
 | ✅ First Hard Problem Solved | ✅ Achieved |
 | ✅ 25 Problems Solved | ✅ Achieved |
 | ✅ 40 Problems Solved | ✅ Achieved |
 | ✅ 50 Problems Solved | ✅ Achieved |
+| ✅ 70 Problems Solved | ✅ Achieved |
+| ✅ 80 Problems Solved | ✅ Achieved |
 
 ---
 
@@ -52,6 +52,7 @@
 ### Math & Bit Manipulation
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
+| Palindrome Number | [9-palindrome-number/palindrome-number.cpp](9-palindrome-number/palindrome-number.cpp) | Easy | [LeetCode](https://leetcode.com/problems/palindrome-number/) |
 | Single Number | [136-single-number/single-number.cpp](136-single-number/single-number.cpp) | Easy | [LeetCode](https://leetcode.com/problems/single-number/) |
 | Number Of 1 Bits | [191-number-of-1-bits/number-of-1-bits.cpp](191-number-of-1-bits/number-of-1-bits.cpp) | Easy | [LeetCode](https://leetcode.com/problems/number-of-1-bits/) |
 | Missing Number | [268-missing-number/missing-number.cpp](268-missing-number/missing-number.cpp) | Easy | [LeetCode](https://leetcode.com/problems/missing-number/) |
@@ -77,6 +78,8 @@
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
 | Maximum Depth Of Binary Tree | [104-maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.cpp](104-maximum-depth-of-binary-tree/maximum-depth-of-binary-tree.cpp) | Easy | [LeetCode](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
+| Path Sum II | [113-path-sum-ii/path-sum-ii.cpp](113-path-sum-ii/path-sum-ii.cpp) | Medium | [LeetCode](https://leetcode.com/problems/path-sum-ii/) |
+| Binary Tree Preorder Traversal | [144-binary-tree-preorder-traversal/binary-tree-preorder-traversal.cpp](144-binary-tree-preorder-traversal/binary-tree-preorder-traversal.cpp) | Easy | [LeetCode](https://leetcode.com/problems/binary-tree-preorder-traversal/) |
 | Binary Tree Right Side View | [199-binary-tree-right-side-view/binary-tree-right-side-view.cpp](199-binary-tree-right-side-view/binary-tree-right-side-view.cpp) | Medium | [LeetCode](https://leetcode.com/problems/binary-tree-right-side-view/) |
 | Lowest Common Ancestor Of A Binary Search Tree | [235-lowest-common-ancestor-of-a-binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.cpp](235-lowest-common-ancestor-of-a-binary-search-tree/lowest-common-ancestor-of-a-binary-search-tree.cpp) | Medium | [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) |
 | Lowest Common Ancestor Of A Binary Tree | [236-lowest-common-ancestor-of-a-binary-tree/lowest-common-ancestor-of-a-binary-tree.cpp](236-lowest-common-ancestor-of-a-binary-tree/lowest-common-ancestor-of-a-binary-tree.cpp) | Medium | [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) |
@@ -93,7 +96,13 @@
 ### Linked List
 | Problem Name | My Solution | Difficulty | LeetCode Link |
 | :----------- | :---------- | :--------- | :------------ |
+| Reverse Linked List | [206-reverse-linked-list/reverse-linked-list.cpp](206-reverse-linked-list/reverse-linked-list.cpp) | Easy | [LeetCode](https://leetcode.com/problems/reverse-linked-list/) |
+| Merge Two Sorted Lists | [21-merge-two-sorted-lists/merge-two-sorted-lists.cpp](21-merge-two-sorted-lists/merge-two-sorted-lists.cpp) | Easy | [LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/) |
+| Linked List Cycle | [141-linked-list-cycle/linked-list-cycle.cpp](141-linked-list-cycle/linked-list-cycle.cpp) | Easy | [LeetCode](https://leetcode.com/problems/linked-list-cycle/) |
 | Linked List Cycle II | [142-linked-list-cycle-ii/linked-list-cycle-ii.cpp](142-linked-list-cycle-ii/linked-list-cycle-ii.cpp) | Medium | [LeetCode](https://leetcode.com/problems/linked-list-cycle-ii/) |
+| Reorder List | [143-reorder-list/reorder-list.cpp](143-reorder-list/reorder-list.cpp) | Medium | [LeetCode](https://leetcode.com/problems/reorder-list/) |
+| Remove Nth Node From End of List | [19-remove-nth-node-from-end-of-list/remove-nth-node-from-end-of-list.cpp](19-remove-nth-node-from-end-of-list/remove-nth-node-from-end-of-list.cpp) | Medium | [LeetCode](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) |
+| Copy List with Random Pointer | [138-copy-list-with-random-pointer/copy-list-with-random-pointer.cpp](138-copy-list-with-random-pointer/copy-list-with-random-pointer.cpp) | Medium | [LeetCode](https://leetcode.com/problems/copy-list-with-random-pointer/) |
 | Intersection Of Two Linked Lists | [160-intersection-of-two-linked-lists/intersection-of-two-linked-lists.cpp](160-intersection-of-two-linked-lists/intersection-of-two-linked-lists.cpp) | Easy | [LeetCode](https://leetcode.com/problems/intersection-of-two-linked-lists/) |
 
 ### Sliding Window
@@ -101,6 +110,7 @@
 | :----------- | :---------- | :--------- | :------------ |
 | Longest Continuous Subarray With Absolute Diff ≤ Limit | [1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp](1549-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit.cpp) | Medium | [LeetCode](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) |
 | Longest Repeating Character Replacement | [424-longest-repeating-character-replacement/longest-repeating-character-replacement.cpp](424-longest-repeating-character-replacement/longest-repeating-character-replacement.cpp) | Medium | [LeetCode](https://leetcode.com/problems/longest-repeating-character-replacement/) |
+| Fruit Into Baskets | [940-fruit-into-baskets/fruit-into-baskets.cpp](940-fruit-into-baskets/fruit-into-baskets.cpp) | Medium | [LeetCode](https://leetcode.com/problems/fruit-into-baskets/) |
 
 ### Backtracking & Recursion
 | Problem Name | My Solution | Difficulty | LeetCode Link |
@@ -145,6 +155,6 @@
 
 ---
 
-**Note:** This README is automatically generated/updated. Last updated: July 26, 2025
-**69 problems** - 🟢 26 Easy, 🟠 39 Medium, 🔴 3 Hard  
-**78 total solutions** - 62 C++ , 16 Python
+**Note:** This README is automatically generated/updated. Last updated: August 7, 2025
+**82 problems** - 🟢 32 Easy, 🟠 46 Medium, 🔴 3 Hard  
+**98 total solutions** - 72 C++ + 26 Python
