@@ -10,35 +10,32 @@
  * };
  */
 
-	class Solution {
-	public:
-	    vector<int> rightSideView(TreeNode* root) {
-	        vector<int> result;
-	        if (!root) {
-	            return result;
-	        }
-	
-	        queue<TreeNode*> q;
-	        q.push(root);
-	
-	        while (!q.empty()) {
-	            int level_size = q.size();
-	            for (int i = 0; i < level_size; ++i) {
-	                TreeNode* current_node = q.front();
-	                q.pop();
-	
-	                if (i == level_size - 1) {
-	                    result.push_back(current_node->val);
-	                }
-	
-	                if (current_node->left) {
-	                    q.push(current_node->left);
-	                }
-	                if (current_node->right) {
-	                    q.push(current_node->right);
-	                }
-	            }
-	        }
-	        return result;
-	    }
-	};
+class Solution {
+public:
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> result;
+        if(!root) return result;
+
+        deque<TreeNode*> q;
+        q.push_back(root);
+
+
+        while(!q.empty()){
+            vector<int> temp;
+            int length = q.size();
+            for(int i=0; i<length; i++){
+                TreeNode* node = q.front();
+                q.pop_front();
+                temp.push_back(node->val);
+
+                if(node->left) q.push_back(node->left);
+                if(node->right) q.push_back(node->right);
+
+            }
+            result.push_back(temp[length-1]);
+        }
+
+
+        return result;
+    }
+};
