@@ -1,15 +1,6 @@
 class Solution:
     def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:
-        d=[]
-        for i in nums:
-            temp = ''
-            for j in str(i):
-                temp += str(mapping[int(j)])
-            
-            d.append((i, int(temp)))
+        def mapped_value(num):
+            return int(''.join(str(mapping[int(d)]) for d in str(num)))
         
-        result = []
-        d.sort(key=lambda item:item[1])
-        result = [item[0] for item in d]
-        
-        return result
+        return sorted(nums, key=mapped_value)
