@@ -1,24 +1,52 @@
 class Solution {
 public:
+
+    int first(vector<int>&nums, int target){
+        int start = 0;
+        int end = nums.size()-1;
+        int ans=-1;
+        while(start <= end){
+            int mid = (start+end)/2;
+            if(nums[mid] == target){
+                ans = mid;
+                end = mid-1;
+            }else if(nums[mid] > target){
+                end = mid-1;
+            }else{
+                start = mid+1;
+            }
+        }
+
+        return ans;
+    }
+
+    int last(vector<int>&nums, int target){
+        int start = 0;
+        int end = nums.size()-1;
+        int ans=-1;
+        while(start <= end){
+            int mid = (start+end)/2;
+            if(nums[mid] == target){
+                ans = mid;
+                start = mid+1;
+            }else if(nums[mid] > target){
+                end = mid-1;
+            }else{
+                start = mid+1;
+            }
+        }
+
+        return ans;
+    }
+
     vector<int> searchRange(vector<int>& nums, int target) {
         int start = 0;
         int end = nums.size()-1;
         while(start <= end){
             int mid = (start+end)/2;
             if(nums[mid] == target){
-                int l = mid;
-                int r = mid;
-
-                while(nums[l] == target){
-                    l--;
-                    if(l<0) break;
-                }
                 
-                while(nums[r] == target){
-                    r++;
-                    if(r>nums.size()-1) break;
-                }
-                return {l+1,r-1};
+                return {first(nums,target),last(nums,target)};
             }else if(nums[mid] < target){
                 start = mid+1;
             }else{
