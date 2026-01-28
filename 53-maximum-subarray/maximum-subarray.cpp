@@ -6,12 +6,8 @@ public:
 
         for(int i=0; i<nums.size(); i++){
             current_sum += nums[i];
-            if(current_sum > max_sum){
-                max_sum = current_sum;
-            }
-            if(current_sum < 0){
-                current_sum = 0;
-            }
+            max_sum = max(max_sum, current_sum);
+            current_sum = (current_sum < 0) ? 0 : current_sum;
         }
 
         return max_sum;
