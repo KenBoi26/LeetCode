@@ -1,42 +1,37 @@
 class Solution {
 public:
-    int find_max(vector<int> piles){
-        int mx = -1;
-        for(auto i : piles){
-            if(i > mx){
-                mx = i;
-            }
+
+    long long maxTime(vector<int> &piles, int speed){
+        long long time=0;
+        for(int i=0; i<piles.size(); i++){
+            time += ceil(double(piles[i])/double(speed));
         }
 
-        return mx;
+        return time;
     }
 
     int minEatingSpeed(vector<int>& piles, int h) {
-        int mx = find_max(piles);
+        int max = -1;
+        for(auto i:piles){
+            if(i > max) max = i;
+        }
 
-        int l=1,r=mx;
+        int start = 1;
+        int end = max;
+        int mid,fina;
+        long long time;
 
-        int ans = r;
-
-        while(l<=r){
-            int k = (l+r)/2;
-            long long sm = 0;
-            for(auto i : piles){
-                sm += (i+k-1)/k;
-            }
-
-
-            if(sm <= h){
-                ans=k;
-                r = k-1;
+        while(start <= end){
+            mid = (start+end)/2;
+            time = maxTime(piles, mid);
+            if(time <= h){
+                fina = mid;
+                end = mid-1;
             }else{
-                l = k+1;
+                start = mid+1;
             }
         }
 
-        return ans;
-
-        
-
+        return fina;
     }
 };
