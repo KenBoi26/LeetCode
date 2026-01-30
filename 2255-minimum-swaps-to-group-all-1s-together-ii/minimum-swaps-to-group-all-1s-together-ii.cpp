@@ -1,14 +1,5 @@
 class Solution {
 public:
-    int countZero(vector<int> &nums, int l, int r){
-        int count=0;
-        while(l<=r){
-            if(nums[l] == 0) count++;
-            l++;
-        }
-
-        return count;
-    }
     int minSwaps(vector<int>& nums) {
         int count = 0;
         for(auto i:nums){
@@ -16,9 +7,7 @@ public:
         }
         if(count == 0) return 0;
         vector<int> dup = nums;
-        for(auto i:nums){
-            dup.push_back(i);
-        }
+        dup.insert(dup.end(), nums.begin(), nums.end());
 
         int l = 0;
         int r = 0;
