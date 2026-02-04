@@ -38,7 +38,6 @@ public:
             if(head->val != temp->val){
                 return false;
             }
-            cout << head->val << " " << temp->val;
             head = head->next;
             temp = temp->next;
         }
