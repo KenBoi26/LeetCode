@@ -27,6 +27,7 @@ public:
             prev = slow;
             slow = nextNode;
         }
+        
         ListNode* temp = slow;
         nextNode = slow->next;
         slow->next = prev;
