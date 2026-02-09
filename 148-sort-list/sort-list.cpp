@@ -10,23 +10,54 @@
  */
 class Solution {
 public:
+    ListNode* getMiddle(ListNode* head){
+        if(head == nullptr || head->next == nullptr) return head;
+        ListNode* slow = head;
+        ListNode* fast = head->next;
+
+        while(fast != nullptr && fast->next != nullptr){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        return slow;
+    }
+
+    ListNode* merge(ListNode* leftHalf, ListNode* rightHalf){
+        ListNode dummy(0);
+        ListNode* dummy1 = &dummy;
+        while(leftHalf && rightHalf){
+            if(leftHalf->val < rightHalf->val){
+                dummy1->next = leftHalf;
+                leftHalf = leftHalf->next;
+            }else{
+                dummy1->next = rightHalf;
+                rightHalf = rightHalf->next;
+            }
+
+            dummy1 = dummy1->next;
+        }
+
+        if(leftHalf != nullptr) dummy1->next = leftHalf;
+
+        if(rightHalf != nullptr) dummy1->next = rightHalf;
+
+        return dummy.next;
+    }
+
     ListNode* sortList(ListNode* head) {
-        vector<int> arr;
-        while(head!=nullptr){
-            arr.push_back(head->val);
-            head = head->next;
-        }
+        if(head == nullptr || head->next == nullptr) return head;
 
-        sort(arr.begin(), arr.end());
+        ListNode* mid = getMiddle(head);
+        ListNode* left = head;
+        ListNode* right = mid->next;
 
-        ListNode* start = new ListNode(-1);
-        ListNode* temp = start;
+        // Disconnecting the left half and right half
+        mid->next = nullptr;
 
-        for(int i=0; i<arr.size(); i++){
-            temp->next = new ListNode(arr[i]);
-            temp = temp->next;
-        }
+        ListNode* leftHalf = sortList(left);
+        ListNode* rightHalf = sortList(right);
 
-        return start->next;
+        return merge(leftHalf, rightHalf);
     }
 };
