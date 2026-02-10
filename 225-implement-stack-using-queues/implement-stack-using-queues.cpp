@@ -1,18 +1,18 @@
 class MyStack {
 public:
     queue<int> stack;
-    queue<int> temp;
     MyStack() {
         
     }
     
     void push(int x) {
-        temp.push(x);
-        while(!stack.empty()){
-            temp.push(stack.front());
+        stack.push(x);
+        int size = stack.size()-1;
+        while(size--){
+            int temp = stack.front();
             stack.pop();
+            stack.push(temp);
         }
-        swap(stack, temp);
     }
     
     int pop() {
