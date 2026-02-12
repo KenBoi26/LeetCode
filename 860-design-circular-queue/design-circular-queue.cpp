@@ -1,92 +1,58 @@
 class MyCircularQueue {
 public:
 
-    class Node{
-        public:
-            int data;
-            Node* next;
-        
-            Node(): data(0), next(nullptr){}
-            Node(int val):data(val), next(nullptr){}
-            Node(int val, Node* pos):data(val), next(pos){}
+    vector<int> data;
+    int front;
+    int rear;
+    int size;
+    int count;
 
-
-    };
-
-    Node* head;
-    Node* tail;
-    int maxSize;
-    int currSize;
-
-    
     MyCircularQueue(int k) {
-        maxSize = k;
-        currSize = 0;
-        head = nullptr;
-        tail = nullptr;
+        front = 0;
+        rear = -1;
+        count = 0;
+        size = k;
+        data.clear(); // to remove the garbage values
+        data.resize(k);
     }
-
-
     
     bool enQueue(int value) {
-        if(isFull()){
-            return false;
-        }
-        Node* newNode = new Node(value);
-        if(isEmpty()){
-            head = newNode;
-            tail = newNode;
-            newNode->next = head;
-        }else{
-            tail->next = newNode;
-            newNode->next = head;
-            tail = newNode;
-        }
+        if(isFull()) return false;
 
-        currSize++;
+        rear = (rear+1)%size;
+        data[rear] = value;
+
+        count++;
         return true;
     }
     
     bool deQueue() {
-        if(isEmpty()){
-            return false;
-        }
+        if(isEmpty()) return false;
 
-        if(currSize == 1){
-            delete head;
-            head = nullptr;
-            tail = nullptr;
-        }else{
-            Node* old = head;
-            head = old->next;
-            tail->next = head;
-            delete old;
-        }
-        currSize--;
+        front = (front+1)%size;
+
+        count--;
         return true;
     }
     
     int Front() {
-        if (isEmpty()) {
-            return -1;
-        }
+        if(isEmpty()) return -1;
 
-        return head->data;
+        return data[front];
     }
     
     int Rear() {
-        if (isEmpty()) {
-            return -1;
-        }
-        return tail->data;
+        if(isEmpty()) return -1;
+
+        return data[rear];
     }
     
     bool isEmpty() {
-        return currSize == 0;
+        return count == 0;
     }
     
     bool isFull() {
-        return currSize == maxSize;
+        return count == size;
     }
 };
 
