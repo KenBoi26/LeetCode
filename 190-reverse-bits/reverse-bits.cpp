@@ -4,7 +4,7 @@ public:
         stack<int> st;
         for (int i = 0; i < 32; i++) {
             st.push(n & 1);
-            n >>= 1;
+            n /= 2;
         }
 
         int i=0;
