@@ -9,26 +9,28 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> result;
-        if (!root) return result;
+        queue<TreeNode*> q;
 
-        deque<TreeNode*> q;
-        q.push_back(root);
+        if(root == nullptr) return result;
+
+        q.push(root);
 
         while(!q.empty()){
+            int size = q.size();
             vector<int> temp;
-            int level = q.size();
-            for(int i=0; i<level; i++){
-                TreeNode* node = q.front();
-                q.pop_front();
-                temp.push_back(node->val);
 
-                if(node->left) q.push_back(node->left);
-                if(node->right) q.push_back(node->right);
+            for(int i=0; i<size;i++){
+                TreeNode* frontNode = q.front();
+                
+                temp.push_back(frontNode->val);
+                q.pop();
+
+                if(frontNode->left) q.push(frontNode->left);
+                if(frontNode->right) q.push(frontNode->right);
             }
 
             result.push_back(temp);
