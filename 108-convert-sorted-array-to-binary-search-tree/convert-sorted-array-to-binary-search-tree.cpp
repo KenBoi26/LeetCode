@@ -11,22 +11,20 @@
  */
 class Solution {
 public:
-    TreeNode* subTree(TreeNode* root, vector<int> &nums, int l, int r){
-        if(l > r) return root;
+    TreeNode* subTree(vector<int> &nums, int l, int r){
+        if(l > r) return nullptr;
         int mid = (l+r)/2;
         TreeNode* temp = new TreeNode(nums[mid]);
-        root = temp;
         
-        temp->left = subTree(root->left, nums, l, mid-1);
-        temp->right = subTree(root->right, nums, mid+1, r);
+        temp->left = subTree(nums, l, mid-1);
+        temp->right = subTree(nums, mid+1, r);
 
-        return root;
+        return temp;
 
     }
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        TreeNode* root = nullptr;
-        root = subTree(root, nums, 0, nums.size()-1);
+        return subTree(nums, 0, nums.size()-1);
 
-        return root;
+    
     }
 };
