@@ -22,8 +22,6 @@ public:
             int distance = target - complete[i].first;
             float time = (float)distance/(float)complete[i].second;
 
-            cout << time << endl;
-
             if(time > st.top()) st.push(time);
 
         }
