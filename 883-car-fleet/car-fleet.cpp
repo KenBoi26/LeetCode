@@ -7,18 +7,18 @@ public:
             complete[i] = {position[i],speed[i]};
         }
 
-        sort(complete.rbegin(), complete.rend());
+        sort(complete.begin(), complete.end());
 
 
         stack<float> st;
 
-        int distance = target - complete[0].first;
+        int distance = target - complete[complete.size()-1].first;
 
-        float time = (float)distance/(float)complete[0].second;
+        float time = (float)distance/(float)complete[complete.size()-1].second;
 
         st.push(time);
 
-        for(int i=1; i<complete.size(); i++){
+        for(int i=complete.size()-2; i>=0; i--){
             int distance = target - complete[i].first;
             float time = (float)distance/(float)complete[i].second;
 
