@@ -6,9 +6,8 @@ class Solution:
         
         prefix = ""
         for i in range(min_length):
-            temp = strs[0][:i+1]
             for j in strs:
-                if j[:i+1] != temp:
+                if i == len(j) or j[i] != strs[0][i]:
                     return prefix
             
             prefix += strs[0][i]
