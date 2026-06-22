@@ -8,7 +8,6 @@ public:
             ans[i[1]+1] -= i[2];
         }
 
-        for(auto i:ans) cout << i << " ";
 
         vector<int> prefix(n);
         prefix[0] = ans[1];
