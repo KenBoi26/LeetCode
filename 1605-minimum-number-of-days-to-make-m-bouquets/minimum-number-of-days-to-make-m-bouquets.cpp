@@ -1,23 +1,20 @@
 class Solution {
 public:
 
-    int calc(vector<int> bloomDay, int mid, int k){
-        for(int i=0; i<bloomDay.size(); i++){
-            bloomDay[i] -= mid; 
-        }
+    int calc(vector<int> &bloomDay, int mid, int k){
         int count = 0;
         int prev = -1;
         int temp = 0;
         
-        for(auto i:bloomDay){
+        for(int i=0; i<bloomDay.size(); i++){
             
-            if(i <= 0){
+            if(bloomDay[i]-mid <= 0){
                 temp++;
             }else{
                 temp = 0;
             }
-            
-            prev = i;
+
+            prev = bloomDay[i]-mid;
 
             if(temp >= k){
                 count++;
