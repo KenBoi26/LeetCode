@@ -16,17 +16,16 @@ public:
             }else{
                 temp = 0;
             }
-            // cout << prev << " " << i << " " << k << endl;
+            
             prev = i;
 
             if(temp >= k){
                 count++;
-                // cout << "hi" << count;
                 temp = 0;
             }
         }
 
-        // cout << count << " " << mid << endl;
+        
         return count;
     }
 
