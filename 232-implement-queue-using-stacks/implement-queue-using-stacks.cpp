@@ -13,13 +13,7 @@ public:
     }
     
     int pop() {
-        if(delete_stack.size() == 0){
-            while(insert_stack.size() > 0){
-                int temp = insert_stack.top();
-                insert_stack.pop();
-                delete_stack.push(temp);
-            }
-        }
+        int temp = peek();
         int print = delete_stack.top();
         delete_stack.pop();
         return print;
@@ -34,17 +28,12 @@ public:
                 delete_stack.push(temp);
             }
         }
+        if(delete_stack.size() == 0 && insert_stack.size() == 0) return -1;
         return delete_stack.top();
     }
     
     bool empty() {
-        if(delete_stack.size() == 0){
-            while(insert_stack.size() > 0){
-                int temp = insert_stack.top();
-                insert_stack.pop();
-                delete_stack.push(temp);
-            }
-        }
+        int temp = peek();
         return delete_stack.size() == 0;
     }
 };
