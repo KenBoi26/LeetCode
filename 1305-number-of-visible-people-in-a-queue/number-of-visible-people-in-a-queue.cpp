@@ -1,10 +1,11 @@
 class Solution {
 public:
     vector<int> canSeePersonsCount(vector<int>& heights) {
+        int n = heights.size();
         stack<int> st;
-        vector<int> ans(heights.size(), 0);
+        vector<int> ans(n, 0);
 
-        for(int i=heights.size()-1; i>=0; i--){
+        for(int i=n-1; i>=0; i--){
             while(!st.empty() && st.top() < heights[i]){
                 ans[i]++;
                 st.pop();
