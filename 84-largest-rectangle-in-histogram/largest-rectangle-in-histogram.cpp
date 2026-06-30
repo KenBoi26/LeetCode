@@ -31,9 +31,7 @@ public:
 
         int maxi = 0;
         for(int i=0; i<n; i++){
-            left[i]++;
-            right[i]--;
-            maxi= max(maxi, heights[i]*(right[i]-left[i]+1));
+            maxi= max(maxi, heights[i]*((right[i]-1)-(left[i]+1)+1));
         }
 
         return maxi;
