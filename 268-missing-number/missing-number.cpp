@@ -1,14 +1,16 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        int result=0;
-        int n = nums.size();
-        int curr = 0;
-        for(int i=0; i<n; i++){
-            result = result ^ nums[i] ^ i;
-        }
-        result^=n;
+        vector<int> freq(nums.size()+1,0);
 
-        return result;
+        for(auto i:nums){
+            freq[i]++;
+        }
+
+        for(int i=0; i<freq.size(); i++){
+            if(freq[i] == 0) return i;
+        }
+
+        return -1;
     }
 };
