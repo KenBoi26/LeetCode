@@ -13,6 +13,7 @@ public:
     bool isPalindrome(ListNode* head) {
         ListNode* slow = head;
         ListNode* fast = head;
+        
         ListNode* prev = nullptr;
         ListNode* nextNode = slow->next;
 
