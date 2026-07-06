@@ -15,10 +15,11 @@ public:
 
         if(!head) return head;
         while (head && head->val == val) head = head->next;
-        if(!head) return head;
+        // if(!head) return head;
+
         ListNode* temp = head;
 
-        while(temp->next){
+        while(temp && temp->next){
             
             if(temp->next->val == val){
                 ListNode* toDel = temp->next;
@@ -29,7 +30,7 @@ public:
             temp = temp->next;
         }
 
-        if(temp->val == val) temp = NULL;
+        if(temp && temp->val == val) temp = NULL;
         
 
         return head;
