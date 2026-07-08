@@ -11,13 +11,16 @@
  */
 class Solution {
 public:
+
+    bool func(TreeNode* p, TreeNode* q){
+        if(!p && !q) return true;
+        if((!p && q) || (!q && p)) return false;
+
+        return p->val == q->val && func(p->left, q->left) && func(p->right, q->right);
+    }
+
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        if(p == nullptr && q == nullptr) return true;
-        if((!p && q) || (p && !q)) return false;
-        if(p->val == q->val){
-            return isSameTree(p->left ,q->left) && isSameTree(p->right, q->right);
-        }else{
-            return false;
-        }
+        if(!p && !q) return true;
+        return func(p,q);
     }
 };
