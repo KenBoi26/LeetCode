@@ -12,27 +12,36 @@
 class Solution {
 public:
 
-    void compute(vector<vector<int>>&ans, vector<int> & path, TreeNode* node, int sum, int target){
-        if(node == NULL) return;
+    bool hasPathSum(TreeNode* root, int targetSum, int sum=0){
+        if(!root) return false;
+        if(!root->left && !root->right && sum+root->val == targetSum) return true;
+        
+        return hasPathSum(root->left, targetSum, sum+root->val) || hasPathSum(root->right, targetSum, sum+root->val);
 
-        path.push_back(node->val);
-        sum+=node->val;
+    }
 
-        if(target == sum & node->left == NULL && node->right == NULL){
-            ans.push_back(path);
+    void get_path(TreeNode* root, int targetSum, vector<int> path, int sum, vector<vector<int>> &result){
+        if(!root) return;
+        path.push_back(root->val);
+        if(!root->left && !root->right && sum+root->val == targetSum){
+            result.push_back(path);
         }
-        compute(ans,path,node->left,sum,target);
+        
+        get_path(root->left, targetSum, path, sum+root->val, result);
 
-        compute(ans, path, node->right, sum, target);
+        get_path(root->right, targetSum, path, sum+root->val, result);
 
-        path.pop_back();
-        sum -= node->val;
     }
 
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
-        vector<vector<int>> ans;
-        vector<int> path;
-        compute(ans, path, root, 0, targetSum);
-        return ans;
+        vector<vector<int>> result;
+        if(!root) return {};
+        if(root->val == targetSum && !root->left && !root->right) return {{root->val}};
+        if(hasPathSum(root, targetSum)){
+            get_path(root, targetSum, {}, 0, result);
+        }
+        
+
+        return result;
     }
 };
