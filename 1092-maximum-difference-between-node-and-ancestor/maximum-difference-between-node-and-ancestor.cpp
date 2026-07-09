@@ -18,8 +18,7 @@ public:
         mn = min(mn, node->val);
         mx = max(mx, node->val);
 
-        return max(dfs(node->left, mn, mx),
-                   dfs(node->right, mn, mx));
+        return max(dfs(node->left, mn, mx), dfs(node->right, mn, mx));
     }
 
     int maxAncestorDiff(TreeNode* root) {
