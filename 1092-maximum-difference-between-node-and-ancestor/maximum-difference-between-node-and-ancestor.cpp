@@ -11,17 +11,24 @@
  */
 class Solution {
 public:
-    int dfs(TreeNode* node, int mn, int mx) {
-        if (!node)
-            return mx - mn;
 
-        mn = min(mn, node->val);
-        mx = max(mx, node->val);
+    void dfs(TreeNode* root, int mn, int mx, int &ans){
+        if(!root) return;
 
-        return max(dfs(node->left, mn, mx), dfs(node->right, mn, mx));
+        mx = max(mx, root->val);
+        mn = min(mn, root->val);
+
+        ans = max(ans, mx-mn);
+
+        dfs(root->left, mn, mx, ans);
+        dfs(root->right, mn, mx, ans);
+
+
     }
 
     int maxAncestorDiff(TreeNode* root) {
-        return dfs(root, root->val, root->val);
+        int ans = 0;
+        dfs(root, INT_MAX, INT_MIN, ans);
+        return ans;        
     }
 };
