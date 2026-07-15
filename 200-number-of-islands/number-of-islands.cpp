@@ -1,33 +1,28 @@
 class Solution {
 public:
 
-    void dfs(int r, int c, vector<vector<char>> &grid){
-        if(r<0 || r>= grid.size() || c<0 || c>=grid[0].size()){
-            return;
-        }
-        if(grid[r][c] == '0') return;
+    void dfs(vector<vector<char>> &grid, int r, int c){
+        if(r<0 || r>=grid.size() || c<0 || c >= grid[0].size()) return;
+        if(grid[r][c] != '1') return;
 
-        grid[r][c] = '0';
+        grid[r][c] = '2';
 
-
-        dfs(r-1, c, grid);
-        dfs(r+1, c, grid);
-        dfs(r, c+1, grid);
-        dfs(r, c-1, grid);
+        dfs(grid, r-1, c);
+        dfs(grid, r+1, c);
+        dfs(grid, r, c-1);
+        dfs(grid, r, c+1);
     }
 
     int numIslands(vector<vector<char>>& grid) {
-        int m = grid.size();
-        int n = grid[0].size();
+        int n = grid.size();
+        int m = grid[0].size();
 
         int count = 0;
 
-        vector<vector<bool>> visited(m, vector<bool>(n,false));
-
-        for(int i=0; i<m; i++){
-            for(int j=0; j<n; j++){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
                 if(grid[i][j] == '1'){
-                    dfs(i,j,grid);
+                    dfs(grid, i, j);
                     count++;
                 }
             }
