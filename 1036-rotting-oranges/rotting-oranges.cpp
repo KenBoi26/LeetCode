@@ -4,53 +4,45 @@ public:
         int n = grid.size();
         int m = grid[0].size();
 
-        queue<pair<int,int>> q;
-
         int count = 0;
+
+        queue<pair<int, int>> q;
 
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
-                if(grid[i][j] == 2){
-                    q.push({i,j});
-                }else if(grid[i][j] == 1){
-                    count++;
-                }
+                if(grid[i][j] == 2) q.push({i,j});
+                if(grid[i][j] == 1) count++;
             }
         }
 
-        if(count == 0) return 0;
-        int minutes = 0;
-        int changedRow[4] = {-1, 1, 0, 0};
-        int changedCol[4] = {0, 0, -1, 1};
+        vector<pair<int,int>> directions = {{1,0}, {-1,0}, {0,-1}, {0,1}};
+        int time = 0;
 
         while(!q.empty()){
             int size = q.size();
             bool rotten = false;
 
             for(int i=0; i<size; i++){
-                pair<int,int>current = q.front();
+                auto [r, c] = q.front();
                 q.pop();
-                int row = current.first;
-                int col = current.second;
-                
 
-                for(int j=0; j<4; j++){
-                    int newRow = row + changedRow[j];
-                    int newCol = col + changedCol[j];
+                for(auto i:directions){
+                    int new_row = r + i.first;
+                    int new_column = c + i.second;
 
-                    if(newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && grid[newRow][newCol] == 1){
-                        grid[newRow][newCol] = 2;
-                        q.push({newRow, newCol});
-
-                        count--;
+                    if(new_row >= 0 && new_row < n && new_column >= 0 && new_column < m && grid[new_row][new_column] == 1){
+                        grid[new_row][new_column] = 2;
+                        q.push({new_row, new_column});
                         rotten = true;
+                        count--;
                     }
                 }
             }
-            if(rotten) minutes++;
+
+            if(rotten) time++;
         }
 
-        if(count == 0) return minutes;
+        if(count == 0) return time;
         return -1;
 
     }
