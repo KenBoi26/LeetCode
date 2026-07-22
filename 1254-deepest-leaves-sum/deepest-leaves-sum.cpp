@@ -20,19 +20,15 @@ public:
 
         while(!q.empty()){
             int size = q.size();
-
-            vector<int> temp;
+            result = {};
             for(int i=0; i<size; i++){
                 TreeNode* node = q.front();
                 q.pop();
-                temp.push_back(node->val);
+                result.push_back(node->val);
 
                 if(node->left) q.push(node->left);
                 if(node->right) q.push(node->right);
             }
-
-            if(temp.size() == 0) break;
-            result = temp;
         }
 
         int sum = 0;
